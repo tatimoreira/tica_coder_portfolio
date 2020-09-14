@@ -1,4 +1,5 @@
 import Layout from "../components/layout";
+import LanguageSelector from "../components/LanguageSelector";
 
 function IndexPage() {
   return (
@@ -13,6 +14,7 @@ function IndexPage() {
         <h2 className="p-3 my-8 text-lg font-bold bg-yellow-400 md:text-2xl">
           Hi! Welcome to your first Next.js site.
         </h2>
+        <LanguageSelector />
       </div>
     </Layout>
   );

@@ -1,7 +1,14 @@
+import React from "react";
+import App from "next/app";
+import { appWithTranslation } from "../utils/i18n";
 import "../css/index.css";
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />;
+class MyApp extends App {
+  render() {
+    const { Component, pageProps } = this.props;
+
+    return <Component {...pageProps} />;
+  }
 }
 
-export default MyApp;
+export default appWithTranslation(MyApp);
