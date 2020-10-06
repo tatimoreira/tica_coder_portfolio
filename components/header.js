@@ -5,18 +5,13 @@ function Header() {
   const [isExpanded, toggleExpansion] = useState(false);
 
   return (
-    <header className="bg-teal-500">
+    <header className="bg-primary">
       <div className="flex flex-wrap items-center justify-between max-w-4xl p-4 mx-auto md:flex-no-wrap md:p-8">
         <div className="flex items-center">
-          <img
-            src="tailwind-logo.svg"
-            className="w-10 mr-3 text-white"
-          />
+          <img src="tailwind-logo.svg" className="w-10 mr-3 text-white" />
 
           <Link href="/">
-            <a className="text-xl font-bold text-white">
-              Next.js Starter Tailwind
-            </a>
+            <a className="text-xl font-bold text-primary">TicaCoder</a>
           </Link>
         </div>
 
@@ -41,11 +36,11 @@ function Header() {
         >
           {[
             { title: "Home", route: "/" },
-            { title: "About", route: "/about" }
-          ].map(navigationItem => (
+            { title: "About", route: "/about" },
+          ].map((navigationItem) => (
             <li className="mt-3 md:mt-0 md:ml-6" key={navigationItem.title}>
               <Link href={navigationItem.route}>
-                <a className="block text-white">{navigationItem.title}</a>
+                <a className="block text-primary">{navigationItem.title}</a>
               </Link>
             </li>
           ))}
