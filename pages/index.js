@@ -1,41 +1,34 @@
 import { useEffect, useContext } from "react";
 import Layout from "../components/layout";
 import LanguageSelector from "../components/LanguageSelector";
-import { useLocalStorage } from "../hooks/useLocalStorage";
-
+import { useTranslation } from "react-i18next";
 import ThemeContext from "../context/ThemeContext";
+import { useTheme, localStorage} from "next-themes";
 
 function IndexPage() {
-  // const [storedTheme, setTheme] = useLocalStorage("theme", "dark");
+  const { t, i18n } = useTranslation();
+  debugger
+  const { theme, setTheme } = useTheme();
+ 
+
+  const onChangeLanguage = (language) => {
+    i18n.changeLanguage(language);
+  };
   const { toggleTheme } = useContext(ThemeContext);
 
-  /*const handleSwap = () => {
-    storedTheme === "dark" ? setTheme("light") : setTheme("dark");
-    console.log("tema", storedTheme);
-  };
-
-  useEffect(() => {
-    storedTheme === "dark";
-  });*/
 
   return (
     <Layout>
-      <h1 className="font-display text-secondary mb-4 text-5xl font-light">
-        STEMNIST
-      </h1>
-      <div className="flex flex-col items-center justify-center">
-        <img
-          src="team-of-critters.svg"
-          className="w-full max-w-xl"
-          alt="Four one-eyed aliens playing"
-        />
-
-        <h2 className="p-3 my-8 text-lg font-bold bg-yellow-400 md:text-2xl">
-          Hi! Welcome to your first Next.js site.
-        </h2>
-        <button onClick={toggleTheme}> Swap</button>
-        <LanguageSelector />
+      <div className="bg-foreground flex flex-col items-center justify-center ">
+        <div className="max-w-4xl">
+          <h1 className="p-3  text-6xl font-bold text-secondary ">
+            <span>{t("welcome")}</span>
+          </h1>
+          <p className="text-comment text-2xl max-w-lg"> {t("description")}</p>
+          <button onClick={theme === 'dark' ? () => setTheme('light'): () => setTheme('dark')}> Swap</button>
+        </div>
       </div>
+    
     </Layout>
   );
 }

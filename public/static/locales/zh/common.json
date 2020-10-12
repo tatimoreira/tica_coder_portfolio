@@ -1,10 +1,10 @@
 {
-  "welcome": "你好！",
-  "description": "THAT IS A TEST PAGE ABOUT\nNEXT.JS INTERNATIONALIZATION.",
+  "welcome": "你好, 世界！",
+  "description": "我是一名哥斯达黎加人的程序员",
   "spanish": "西班牙语",
   "english": "英语",
   "chinese": "汉语",
-  "articleTitle": "SAMPLE TEXT",
+  "about": "SAMPLE TEXT",
   "articleDescription": "ABOUT VOLCANOES",
   "article1StParagraph": "A volcano is a rupture in the crust of a planetary-mass object, such as Earth, that allows hot lava, volcanic ash, and gases to escape from a magma chamber below the surface.",
   "article2NdParagraph": "Earth's volcanoes occur because its crust is broken into 17 major, rigid tectonic plates that float on a hotter, softer layer in its mantle. Therefore, on Earth, volcanoes are generally found where tectonic plates are diverging or converging, and most are found underwater."

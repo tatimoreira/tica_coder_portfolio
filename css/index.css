@@ -1,16 +1,16 @@
 @tailwind base;
 
 :root {
-  --color-bg-primary: #0252cc;
+  --color-bg-primary: #ff5851;
   --color-bg-secondary: #ffc402;
   --color-bg-default: #fff;
-  --color-bg-inverse: #fff;
+  --color-bg-inverse: #f8f8f8;
 
-  --color-text-primary: #fff;
+  --color-text-primary: #1c1b20;
   --color-text-secondary: #755f17;
   --color-text-default: #444;
   --color-text-default-soft: #999;
-  --color-text-inverse: #444;
+  --color-text-inverse: #fff;
   --color-text-inverse-soft: #767676;
 
   --font-display: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -25,16 +25,19 @@
 
 /** purgecss start ignore */
 .dark {
+  --color-bg-foreground: #444b58;
+  --color-bg-background: #30363e;
   --color-bg-primary: #5cdb95;
-  --color-bg-secondary: #dcd0c0;
-  --color-bg-default: #f4f4f4;
+  --color-bg-secondary: #2e2e2e;
+  --color-bg-default: #27241d;
   --color-bg-inverse: #373737;
 
-  --color-text-primary: #05386b;
-  --color-text-secondary: #927e7e;
+  --color-text-comment: #636d83;
+  --color-text-primary: #5cdb95;
+  --color-text-secondary: #bc85f9;
   --color-text-default: #373737;
-  --color-text-default-soft: #6a6a6a;
-  --color-text-inverse: #fff;
+  --color-text-default-soft: #ffe380;
+  --color-text-inverse: #99ffff;
   --color-text-inverse-soft: #bbb;
 
   --font-display: Georgia, Times, "Times New Roman", serif;
@@ -47,6 +50,58 @@
   --font-weight-btn: 600;
 
   --rounded-btn: 0;
+}
+
+/* Split the screen in half */
+.split {
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  overflow-x: hidden;
+  padding: 20px;
+  height: 80%;
+}
+
+/* Control the left side */
+.left {
+  left: 0;
+  margin-left: 84px;
+}
+
+/* Control the right side */
+.right {
+  right: 0;
+  margin-right: 84px;
+}
+
+.dropdown {
+  position: static;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+  right: 86px;
+  left: auto;
+}
+
+.sideBar {
+  width: calc(31% - 265px); /* (970px/2)-220px=265px */
+  height: 81vh;
+  background-color: lightgrey;
+  position: absolute;
+  top: 60px;
+  left: 49px;
+  overflow: hidden;
+}
+
+.sideBarContent {
+  width: 100%;
+  max-width: 220px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: rgba(255, 0, 0, 0.3);
 }
 /** purgecss end ignore */
 

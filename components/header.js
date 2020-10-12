@@ -1,17 +1,17 @@
 import Link from "next/link";
 import { useState } from "react";
+import LanguageSelector from "./LanguageSelector";
+
 
 function Header() {
   const [isExpanded, toggleExpansion] = useState(false);
 
   return (
-    <header className="bg-primary">
-      <div className="flex flex-wrap items-center justify-between max-w-4xl p-4 mx-auto md:flex-no-wrap md:p-8">
+    <nav className="bg-background relative">
+      <div className="flex flex-wrap items-center justify-between p-4 mx-auto md:flex-no-wrap ">
         <div className="flex items-center">
-          <img src="tailwind-logo.svg" className="w-10 mr-3 text-white" />
-
           <Link href="/">
-            <a className="text-xl font-bold text-primary">TicaCoder</a>
+            <a className="text-xl font-bold text-primary md:ml-8">TicaCoder</a>
           </Link>
         </div>
 
@@ -34,19 +34,17 @@ function Header() {
             isExpanded ? `block` : `hidden`
           } md:flex flex-col md:flex-row md:items-center md:justify-center text-sm w-full md:w-auto`}
         >
-          {[
-            { title: "Home", route: "/" },
-            { title: "About", route: "/about" },
-          ].map((navigationItem) => (
-            <li className="mt-3 md:mt-0 md:ml-6" key={navigationItem.title}>
-              <Link href={navigationItem.route}>
-                <a className="block text-primary">{navigationItem.title}</a>
-              </Link>
-            </li>
-          ))}
+          <li className="dropdown text-secondary">
+            <img src="translate.svg" className="w-6 mr-3" />
+            <LanguageSelector />
+          </li>
+
+          <li className="text-secondary">
+            <img src="style.svg" className="w-6 mr-3 " />
+          </li>
         </ul>
       </div>
-    </header>
+    </nav>
   );
 }
 

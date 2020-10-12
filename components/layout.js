@@ -2,20 +2,22 @@ import Header from "./header";
 import Footer from "./footer";
 import React, { useContext } from "react";
 import ThemeContext from "../context/ThemeContext";
+import { useTheme } from "next-themes";
 
 function Layout({ children, mainClasses = "", isLight = false }) {
-  const { storedTheme } = useContext(ThemeContext);
   debugger;
+  const { theme } = useTheme();
   return (
     <div
       className={`${
-        storedTheme === "dark" ? "dark" : "light"
-      } flex flex-col min-h-screen`}
+        theme === "dark" ? "dark" : "light"
+      } flex flex-col min-h-screen bg-background `}
     >
       <Header />
-      <main className="flex-1 w-full max-w-4xl p-4 mx-auto md:px-8 md:py-16">
-        {children}
-      </main>
+      <div className="sideBar">
+          <div className="sideBarContent"></div>
+        </div>
+      <main className="flex-1  md:mr-12 md:ml-12 bg-foreground">{children}</main>
       <Footer />
     </div>
   );

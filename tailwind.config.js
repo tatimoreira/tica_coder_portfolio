@@ -10,8 +10,11 @@ module.exports = {
       'default-soft': 'var(--color-text-default-soft)',
       inverse: 'var(--color-text-inverse)',
       'inverse-soft': 'var(--color-text-inverse-soft)',
+      comment: 'var(--color-text-comment)',
     },
     backgroundColor: {
+      background: 'var(--color-bg-background)',
+      foreground: 'var(--color-bg-foreground)',
       primary: 'var(--color-bg-primary)',
       secondary: 'var(--color-bg-secondary)',
       default: 'var(--color-bg-default)',

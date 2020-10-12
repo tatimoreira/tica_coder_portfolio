@@ -1,10 +1,10 @@
 {
-  "welcome": "hola",
-  "description": "THAT IS A TEST PAGE ABOUT\nNEXT.JS INTERNATIONALIZATION.",
+  "welcome": "Hola Mundo!",
+  "description": "Soy Tatiana Moreira, una Ingeniera de Software de Costa Rica.",
   "spanish": "Español",
   "english": "Inglés",
   "chinese": "Chino",
-  "articleTitle": "SAMPLE TEXT",
+  "about": "Lo que más disfruto de programar es la capacidad de unir todas las piezas para construir soluciones de calidad. Soy muy crítica y analítica. Disfruto construir soluciones con propósito, empoderar y mejorar vidas. Amo el Internet, donde toma forma mi trabajo. Soy consciente del enorme impacto social que tiene la tecnología en la sociedad moderna, así que creo que es mi responsabilidad hacer esto y hacer el bien :)",
   "articleDescription": "ABOUT VOLCANOES",
   "article1StParagraph": "A volcano is a rupture in the crust of a planetary-mass object, such as Earth, that allows hot lava, volcanic ash, and gases to escape from a magma chamber below the surface.",
   "article2NdParagraph": "Earth's volcanoes occur because its crust is broken into 17 major, rigid tectonic plates that float on a hotter, softer layer in its mantle. Therefore, on Earth, volcanoes are generally found where tectonic plates are diverging or converging, and most are found underwater."
