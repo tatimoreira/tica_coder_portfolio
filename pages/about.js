@@ -1,35 +1,28 @@
 import Layout from "../components/layout";
+import { useTranslation } from "react-i18next";
 
 function AboutPage() {
+  const { t, i18n } = useTranslation();
   return (
     <Layout>
-      <div className="flex flex-col space-y-6 md:flex-row md:space-x-6 md:space-y-0">
-        <div className="space-y-6 md:w-1/2">
-          {[
-            {
-              heading: `What is Tailwind?`,
-              body: `Tailwind CSS is a highly customizable, low-level CSS framework that gives you all
-              of the building blocks you need to build bespoke designs without any
-              annoying opinionated styles you have to fight to override.`,
-            },
-            {
-              heading: `What is Next.js?`,
-              body: `Next.js is a minimalistic framework for creating server-rendered
-              React applications.`,
-            },
-          ].map((section) => (
-            <div key={section.heading}>
-              <h2 className="mb-3 text-xl font-bold">{section.heading}</h2>
-              <p>{section.body}</p>
-            </div>
-          ))}
+      <div className='flex flex-col space-y-6 md:flex-row md:space-x-6 md:space-y-0'>
+        <div className='space-y-6 md:w-1/2'>
+          <div>
+            <h1 className='mb-3 text-xl font-bold'>{t("aboutWork")}</h1>
+            <h2>{t("techStack")}</h2>
+            <ul>
+              <li>ReactJS</li>
+              <li>Graphql</li>
+              <li>Golang</li>
+            </ul>
+          </div>
         </div>
 
-        <div className="md:w-1/2">
+        <div className='md:w-1/2'>
           <img
-            alt="A one-eyed alien holding a broken cable connected between a server and a desktop computer"
-            className="w-full"
-            src="critter.svg"
+            alt='A one-eyed alien holding a broken cable connected between a server and a desktop computer'
+            className='w-full'
+            src='critter.svg'
           />
         </div>
       </div>

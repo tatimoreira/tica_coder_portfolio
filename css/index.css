@@ -28,7 +28,7 @@
   --color-bg-foreground: #444b58;
   --color-bg-background: #30363e;
   --color-bg-primary: #5cdb95;
-  --color-bg-secondary: #2e2e2e;
+  --color-bg-secondary: #3d434f;
   --color-bg-default: #27241d;
   --color-bg-inverse: #373737;
 
@@ -52,57 +52,20 @@
   --rounded-btn: 0;
 }
 
-/* Split the screen in half */
-.split {
-  width: 50%;
-  position: fixed;
-  z-index: 1;
-  overflow-x: hidden;
-  padding: 20px;
-  height: 80%;
-}
-
-/* Control the left side */
-.left {
-  left: 0;
-  margin-left: 84px;
-}
-
-/* Control the right side */
-.right {
-  right: 0;
-  margin-right: 84px;
-}
-
 .dropdown {
   position: static;
 }
 
 .dropdown:hover .dropdown-menu {
   display: block;
-  right: 86px;
+  right: 67px;
   left: auto;
 }
 
 .sideBar {
-  width: calc(31% - 265px); /* (970px/2)-220px=265px */
-  height: 81vh;
-  background-color: lightgrey;
-  position: absolute;
-  top: 60px;
-  left: 49px;
-  overflow: hidden;
+  height: 88vh;
 }
 
-.sideBarContent {
-  width: 100%;
-  max-width: 220px;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  right: 0;
-  background-color: rgba(255, 0, 0, 0.3);
-}
 /** purgecss end ignore */
 
 @tailwind components;

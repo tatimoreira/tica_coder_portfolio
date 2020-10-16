@@ -7,7 +7,6 @@ import { useTheme, localStorage} from "next-themes";
 
 function IndexPage() {
   const { t, i18n } = useTranslation();
-  debugger
   const { theme, setTheme } = useTheme();
  
 
