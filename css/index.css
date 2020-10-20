@@ -1,16 +1,18 @@
 @tailwind base;
 
 :root {
+  --color-bg-foreground: #fafafa;
+  --color-bg-background: #d6d6d6;
   --color-bg-primary: #ff5851;
-  --color-bg-secondary: #ffc402;
+  --color-bg-secondary: #f2f2f2;
   --color-bg-default: #fff;
   --color-bg-inverse: #f8f8f8;
 
-  --color-text-primary: #1c1b20;
-  --color-text-secondary: #755f17;
+  --color-text-primary: #ae47ac;
+  --color-text-secondary: #4f82ee;
   --color-text-default: #444;
   --color-text-default-soft: #999;
-  --color-text-inverse: #fff;
+  --color-text-inverse: #5ca45c;
   --color-text-inverse-soft: #767676;
 
   --font-display: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -21,6 +23,8 @@
   --font-weight-btn: 600;
 
   --rounded-btn: 0.25rem;
+
+  --color-border-secondary: #4f82ee;
 }
 
 /** purgecss start ignore */
@@ -50,6 +54,8 @@
   --font-weight-btn: 600;
 
   --rounded-btn: 0;
+
+  --color-border-primary: #5cdb95;
 }
 
 .dropdown {

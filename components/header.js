@@ -15,11 +15,11 @@ function Header() {
         </div>
 
         <button
-          className='flex items-center block px-3 py-2 text-white border border-white rounded md:hidden'
+          className='flex items-center block px-3 py-2 border border-secondary rounded md:hidden'
           onClick={() => toggleExpansion(!isExpanded)}
         >
           <svg
-            className='w-3 h-3 fill-current'
+            className='w-3 h-3 fill-current text-secondary'
             viewBox='0 0 20 20'
             xmlns='http://www.w3.org/2000/svg'
           >

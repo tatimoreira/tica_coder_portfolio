@@ -1,20 +1,16 @@
 function Footer() {
   return (
-    <footer className="bg-blue-500">
-      <ul className="flex items-center justify-between max-w-4xl p-4 mx-auto text-sm text-white">
-        <li className="font-bold text-inverse-soft">
+    <footer className='bg-blue-500'>
+      <ul className='flex items-center justify-between max-w-4xl p-4 mx-auto text-sm text-inverse font-bold'>
+        <li>
           Created by{" "}
-          <a href="https://github.com/tatimoreira" target="_blank" className="font-bold text-inverse-soft">
+          <a href='https://github.com/tatimoreira' target='_blank'>
             Tatiana Moreira
           </a>
         </li>
 
         <li>
-          <a
-            href="https://github.com/tatimoreira"
-            target="_blank"
-            className="font-bold text-inverse-soft"
-          >
+          <a href='https://github.com/tatimoreira' target='_blank'>
             GitHub
           </a>
         </li>

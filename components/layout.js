@@ -25,7 +25,7 @@ function Layout({ children, mainClasses = "", isLight = false }) {
           <ul className='p-10'>
             {[
               { title: t("aboutMe"), route: "/" },
-              { title: t("techStack"), route: "/about" },
+              { title: t("aboutWork"), route: "/about" },
             ].map((navigationItem) => (
               <div className='flex items-center text-secondary '>
                 <div className='-mt-2'>
