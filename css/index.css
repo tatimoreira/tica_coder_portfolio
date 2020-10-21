@@ -6,7 +6,7 @@
   --color-bg-primary: #ff5851;
   --color-bg-secondary: #f2f2f2;
   --color-bg-default: #fff;
-  --color-bg-inverse: #f8f8f8;
+  --color-bg-inverse: #eeeeee;
 
   --color-text-primary: #ae47ac;
   --color-text-secondary: #4f82ee;
@@ -24,6 +24,7 @@
 
   --rounded-btn: 0.25rem;
 
+  --color-border-primary: ##ae47ac;
   --color-border-secondary: #4f82ee;
 }
 
@@ -56,6 +57,7 @@
   --rounded-btn: 0;
 
   --color-border-primary: #5cdb95;
+  --color-border-secondary: #bc85f9;
 }
 
 .dropdown {

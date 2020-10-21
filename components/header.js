@@ -1,21 +1,55 @@
 import Link from "next/link";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
+
+const languages = [
+  {
+    name: "EN",
+    shortName: "en",
+  },
+  {
+    name: "ES",
+    shortName: "es",
+  },
+  {
+    name: "ZH",
+    shortName: "zh",
+  },
+];
+
 import LanguageSelector from "./LanguageSelector";
 
 function Header() {
+  const { t, i18n } = useTranslation();
   const [isExpanded, toggleExpansion] = useState(false);
+
+  const onChangeLanguage = (language) => {
+    i18n.changeLanguage(language);
+  };
 
   return (
     <nav className='bg-background relative'>
       <div className='flex flex-wrap items-center justify-between p-4 mx-auto md:flex-no-wrap '>
         <div className='flex items-center'>
           <Link href='/'>
-            <a className='text-xl font-bold text-primary md:ml-8'>TicaCoder</a>
+            <a className='text-xl font-bold text-secondary md:ml-8'>
+              TicaCoder
+            </a>
           </Link>
+          <div className='hidden md:flex '>
+            {languages.map((language, key) => (
+              <button
+                className='p-1 m-1 border-2 text-s text-primary rounded-sm font-bold rounded border-primary'
+                onClick={() => onChangeLanguage(language.shortName)}
+              >
+                {t(language.name)}
+              </button>
+            ))}
+          </div>
         </div>
 
         <button
-          className='flex items-center block px-3 py-2 border border-secondary rounded md:hidden'
+          className='flex items-center block px-3 py-2 border-2 border-secondary rounded  md:hidden'
           onClick={() => toggleExpansion(!isExpanded)}
         >
           <svg
@@ -33,9 +67,19 @@ function Header() {
             isExpanded ? `block` : `hidden`
           } md:flex flex-col md:flex-row md:items-center md:justify-center text-sm w-full md:w-auto`}
         >
-          <li className='dropdown text-secondary w-6 mr-3'>
+          <li className='md:hidden bg-inverse mt-1 flex justify-center h-10'>
+            {languages.map((language, key) => (
+              <button
+                className='p-1 m-1 border-2 text-s text-primary rounded-sm font-bold rounded border-primary'
+                onClick={() => onChangeLanguage(language.shortName)}
+              >
+                {t(language.name)}
+              </button>
+            ))}
+          </li>
+          <li className='dropdown flex justify-center text-primary w-full mt-1 mr-3 bg-inverse h-10'>
             <svg
-              class='w-6 h-6'
+              class='w-6'
               fill='none'
               stroke='currentColor'
               viewBox='0 0 24 24'
@@ -50,22 +94,19 @@ function Header() {
             </svg>
             <LanguageSelector />
           </li>
-
-          <li className='text-secondary w-6 mr-3'>
-            <svg
-              xmlns='http://www.w3.org/2000/svg'
-              fill='none'
-              viewBox='0 0 24 24'
-              stroke='currentColor'
+          {[
+            { title: t("aboutMe"), route: "/" },
+            { title: t("aboutWork"), route: "/about" },
+          ].map((navigationItem) => (
+            <li
+              className='mt-1 flex justify-center font-bold text-primary text-lg bg-inverse h-10 md:hidden'
+              key={navigationItem.title}
             >
-              <path
-                stroke-linecap='round'
-                stroke-linejoin='round'
-                stroke-width='2'
-                d='M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01'
-              />
-            </svg>
-          </li>
+              <Link href={navigationItem.route}>
+                <a className='block text-white'>{navigationItem.title}</a>
+              </Link>
+            </li>
+          ))}
         </ul>
       </div>
     </nav>

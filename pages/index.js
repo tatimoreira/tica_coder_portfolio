@@ -18,10 +18,13 @@ function IndexPage() {
     <Layout>
       <div className='bg-foreground flex flex-col pl-16 justify-center '>
         <div className=''>
-          <h1 className='text-6xl font-bold text-secondary '>
+          <h1 className='text-6xl font-bold text-secondary pt-5'>
             <span>{t("welcome")}</span>
           </h1>
-          <p className='text-inverse-soft text-2xl '> {t("description")}</p>
+          <p className='text-inverse-soft text-2xl max-w-6xl'>
+            {" "}
+            {t("description")}
+          </p>
           <button
             onClick={
               theme === "dark"

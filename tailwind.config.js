@@ -20,6 +20,7 @@ module.exports = {
       inverse: "var(--color-bg-inverse)",
     },
     borderColor: {
+      primary: "var(--color-border-primary)",
       secondary: "var(--color-border-secondary)",
     },
     fontFamily: {
