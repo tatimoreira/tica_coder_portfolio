@@ -1,40 +1,36 @@
 import { useEffect, useContext } from "react";
 import Layout from "../components/layout";
-import LanguageSelector from "../components/LanguageSelector";
 import { useTranslation } from "react-i18next";
-import ThemeContext from "../context/ThemeContext";
-import { useTheme, localStorage } from "next-themes";
+import { motion } from "framer-motion";
+import PageTitle from "../components/PageTitle";
 
 function IndexPage() {
   const { t, i18n } = useTranslation();
-  const { theme, setTheme } = useTheme();
-
-  const onChangeLanguage = (language) => {
-    i18n.changeLanguage(language);
-  };
-  const { toggleTheme } = useContext(ThemeContext);
 
   return (
     <Layout>
-      <div className='bg-foreground flex flex-col pl-16 justify-center '>
-        <div className=''>
-          <h1 className='text-6xl font-bold text-secondary pt-5'>
-            <span>{t("welcome")}</span>
-          </h1>
-          <p className='text-inverse-soft text-2xl max-w-6xl'>
+      <div className='flex flex-col pl-16 md:border-t-2 md:border-b-2 md:border-r-2 md:border-solid bg-foreground sideBar md:border-secondary'>
+        <div className='pt-8'>
+          <PageTitle text={t("welcome")}></PageTitle>
+
+          <p className='max-w-6xl text-2xl text-inverse-soft'>
             {" "}
             {t("description")}
           </p>
-          <button
-            onClick={
-              theme === "dark"
-                ? () => setTheme("light")
-                : () => setTheme("dark")
-            }
-          >
+          <h2 className='pt-2 text-2xl font-bold text-primary'>
+            {t("hobbiesTitle")}
+          </h2>
+          <p className='max-w-6xl text-2xl text-inverse-soft'>
             {" "}
-            Swap
-          </button>
+            {t("hobbies")}
+          </p>
+          <h2 className='pt-2 text-2xl font-bold text-primary'>
+            {t("standForTitle")}
+          </h2>
+          <p className='max-w-6xl text-2xl text-inverse-soft'>
+            {" "}
+            {t("standFor")}
+          </p>
         </div>
       </div>
     </Layout>

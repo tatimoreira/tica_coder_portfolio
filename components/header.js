@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import { useTheme, localStorage } from "next-themes";
 
 const languages = [
   {
@@ -22,13 +23,14 @@ import LanguageSelector from "./LanguageSelector";
 function Header() {
   const { t, i18n } = useTranslation();
   const [isExpanded, toggleExpansion] = useState(false);
+  const { theme, setTheme } = useTheme();
 
   const onChangeLanguage = (language) => {
     i18n.changeLanguage(language);
   };
 
   return (
-    <nav className='bg-background relative'>
+    <nav className='relative bg-background'>
       <div className='flex flex-wrap items-center justify-between p-4 mx-auto md:flex-no-wrap '>
         <div className='flex items-center'>
           <Link href='/'>
@@ -39,7 +41,8 @@ function Header() {
           <div className='hidden md:flex '>
             {languages.map((language, key) => (
               <button
-                className='p-1 m-1 border-2 text-s text-primary rounded-sm font-bold rounded border-primary'
+                key={key}
+                className='p-1 m-1 font-bold border-2 rounded-sm rounded text-s text-primary border-primary'
                 onClick={() => onChangeLanguage(language.shortName)}
               >
                 {t(language.name)}
@@ -49,7 +52,7 @@ function Header() {
         </div>
 
         <button
-          className='flex items-center block px-3 py-2 border-2 border-secondary rounded  md:hidden'
+          className='flex items-center block px-3 py-2 border-2 rounded border-secondary md:hidden'
           onClick={() => toggleExpansion(!isExpanded)}
         >
           <svg
@@ -65,41 +68,38 @@ function Header() {
         <ul
           className={`${
             isExpanded ? `block` : `hidden`
-          } md:flex flex-col md:flex-row md:items-center md:justify-center text-sm w-full md:w-auto`}
+          } pr-4 md:flex flex-col md:flex-row md:items-center md:justify-center text-sm w-full md:w-auto`}
         >
-          <li className='md:hidden bg-inverse mt-1 flex justify-center h-10'>
+          <li className='flex justify-center h-10 mt-1 md:hidden bg-inverse'>
             {languages.map((language, key) => (
               <button
-                className='p-1 m-1 border-2 text-s text-primary rounded-sm font-bold rounded border-primary'
+                className='p-1 m-1 font-bold border-2 rounded-sm rounded text-s text-primary border-primary'
                 onClick={() => onChangeLanguage(language.shortName)}
               >
                 {t(language.name)}
               </button>
             ))}
           </li>
-          <li className='dropdown flex justify-center text-primary w-full mt-1 mr-3 bg-inverse h-10'>
-            <svg
-              class='w-6'
-              fill='none'
-              stroke='currentColor'
-              viewBox='0 0 24 24'
-              xmlns='http://www.w3.org/2000/svg'
+          <li className='flex justify-center w-full h-10 mt-1 mr-3 bg-inverse md:bg-background'>
+            <button
+              className='p-1 m-1 font-bold border-2 rounded-sm rounded text-s text-primary border-primary'
+              onClick={() => setTheme("light")}
             >
-              <path
-                stroke-linecap='round'
-                stroke-linejoin='round'
-                stroke-width='2'
-                d='M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129'
-              ></path>
-            </svg>
-            <LanguageSelector />
+              LIGHT
+            </button>
+            <button
+              className='p-1 m-1 font-bold border-2 rounded-sm rounded text-s text-primary border-primary'
+              onClick={() => setTheme("dark")}
+            >
+              DARK
+            </button>
           </li>
           {[
             { title: t("aboutMe"), route: "/" },
             { title: t("aboutWork"), route: "/about" },
           ].map((navigationItem) => (
             <li
-              className='mt-1 flex justify-center font-bold text-primary text-lg bg-inverse h-10 md:hidden'
+              className='flex justify-center h-10 mt-1 text-lg font-bold text-primary bg-inverse md:hidden'
               key={navigationItem.title}
             >
               <Link href={navigationItem.route}>

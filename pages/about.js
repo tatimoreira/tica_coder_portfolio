@@ -1,29 +1,32 @@
 import Layout from "../components/layout";
 import { useTranslation } from "react-i18next";
+import { motion } from "framer-motion";
+import PageTitle from "../components/PageTitle";
 
 function AboutPage() {
   const { t, i18n } = useTranslation();
   return (
     <Layout>
-      <div className='bg-foreground flex flex-col pl-16 pr-16 justify-center'>
+      <div className='flex flex-col pt-8 pr-16 md:pl-16 bg-foreground'>
         <div className=''>
-          <h1 className='text-6xl font-bold text-secondary '>
-            <span>{t("aboutWork")}</span>
-          </h1>
-          <h2 className='text-primary text-2xl font-bold'>
+          <PageTitle text={t("aboutWork")}></PageTitle>
+
+          <h2 className='pt-2 text-2xl font-bold text-primary'>
             {t("missionTitle")}
           </h2>
-          <p className='text-inverse-soft text-2xl '> {t("mission")}</p>
-          <h2 className='text-primary text-2xl font-bold'>{t("techStack")}</h2>
-          <p className='text-inverse-soft text-2xl '> {t("techStackText")}</p>
-          <h2 className='text-primary text-2xl font-bold'>
+          <p className='text-2xl text-inverse-soft '> {t("mission")}</p>
+          <h2 className='pt-2 text-2xl font-bold text-primary'>
+            {t("techStack")}
+          </h2>
+          <p className='text-2xl text-inverse-soft '> {t("techStackText")}</p>
+          <h2 className='pt-2 text-2xl font-bold text-primary'>
             {t("hireInfoTitle")}
           </h2>
-          <p className='text-inverse-soft text-2xl '>
+          <p className='text-2xl text-inverse-soft '>
             {" "}
             {t("hireInfoPriority")}
           </p>
-          <h2 className='text-primary text-2xl font-bold'>
+          <h2 className='pt-2 text-2xl font-bold text-primary'>
             {t("hireInfoConditionsTitle")}
           </h2>
         </div>

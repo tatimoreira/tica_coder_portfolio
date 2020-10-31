@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import Link from "next/link";
+import Head from "next/head";
 
 import { useTranslation } from "react-i18next";
 
@@ -18,17 +19,24 @@ function Layout({ children, mainClasses = "", isLight = false }) {
         theme === "dark" ? "dark" : "light"
       } flex flex-col min-h-screen bg-background `}
     >
+      <Head>
+        <title>TICACODER</title>
+        <meta name='viewport' content='initial-scale=1.0, width=device-width' />
+      </Head>
       <Header />
 
       <main className='flex-1 overflow-x-auto md:mr-12 md:ml-12 bg-foreground'>
-        <aside className='sideBar bg-secondary w-1/5 float-left'>
+        <aside className='hidden float-left w-1/5 border-2 border-solid sideBar bg-background md:block border-secondary'>
           <ul className='p-10'>
             {[
               { title: t("aboutMe"), route: "/" },
               { title: t("aboutWork"), route: "/about" },
             ].map((navigationItem) => (
-              <div className='flex items-center text-secondary '>
-                <div className='-mt-2'>
+              <li
+                className='pb-5 mt-3 text-lg font-bold'
+                key={navigationItem.title}
+              >
+                <div className='flex items-center text-secondary '>
                   <svg
                     class='w-6 h-6'
                     fill='none'
@@ -43,16 +51,28 @@ function Layout({ children, mainClasses = "", isLight = false }) {
                       d='M9 5l7 7-7 7'
                     ></path>
                   </svg>
-                </div>
-                <li
-                  className='mt-3 pb-5 font-bold text-primary text-lg'
-                  key={navigationItem.title}
-                >
+
+                  <svg
+                    class='w-6 h-6'
+                    fill='none'
+                    stroke='currentColor'
+                    viewBox='0 0 24 24'
+                    xmlns='http://www.w3.org/2000/svg'
+                  >
+                    <path
+                      stroke-linecap='round'
+                      stroke-linejoin='round'
+                      stroke-width='2'
+                      d='M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z'
+                    ></path>
+                  </svg>
                   <Link href={navigationItem.route}>
-                    <a className='block text-white'>{navigationItem.title}</a>
+                    <a className='block p-1 text-primary'>
+                      {navigationItem.title}
+                    </a>
                   </Link>
-                </li>
-              </div>
+                </div>
+              </li>
             ))}
           </ul>
         </aside>

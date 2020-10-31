@@ -8,11 +8,11 @@
     "analyze": "npm run analyze:tailwind-css-class-order",
     "fix:tailwind-css-class-order": "rustywind --write .",
     "fix": "npm run fix:tailwind-css-class-order",
-    "dev": "nodemon ./server/server.js",
-    "build": "next build",
     "export": "npm run build && next export",
-    "start": "NODE_ENV=production node ./server/server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
   },
   "repository": {
     "type": "git",
@@ -26,6 +26,7 @@
   "homepage": "https://github.com/taylorbryant/next-starter-tailwind#readme",
   "dependencies": {
     "express": "^4.17.1",
+    "framer-motion": "^2.9.4",
     "i18next-express-middleware": "^2.0.0",
     "install": "^0.13.0",
     "next": "^9.5.3",

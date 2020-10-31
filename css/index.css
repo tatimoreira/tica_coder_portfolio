@@ -2,17 +2,17 @@
 
 :root {
   --color-bg-foreground: #fafafa;
-  --color-bg-background: #d6d6d6;
+  --color-bg-background: #fafafa;
   --color-bg-primary: #ff5851;
-  --color-bg-secondary: #f2f2f2;
+  --color-bg-secondary: #fafafa;
   --color-bg-default: #fff;
   --color-bg-inverse: #eeeeee;
 
   --color-text-primary: #ae47ac;
-  --color-text-secondary: #4f82ee;
+  --color-text-secondary: #1763aa;
   --color-text-default: #444;
   --color-text-default-soft: #999;
-  --color-text-inverse: #5ca45c;
+  --color-text-inverse: ##1763aa;
   --color-text-inverse-soft: #767676;
 
   --font-display: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -58,16 +58,6 @@
 
   --color-border-primary: #5cdb95;
   --color-border-secondary: #bc85f9;
-}
-
-.dropdown {
-  position: static;
-}
-
-.dropdown:hover .dropdown-menu {
-  display: block;
-  right: 67px;
-  left: auto;
 }
 
 .sideBar {

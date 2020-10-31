@@ -2,6 +2,10 @@
   "welcome": "Hello World!",
   "description": "I'm Tatiana Moreira, a Software Engineer, a web lover and developer, a spanish/english/chinese speaker, a blockchain enthusiast based in Costa Rica.",
   "aboutMe": "About me",
+  "hobbiesTitle": "My Hobbies",
+  "hobbies": "I'm a plant lady, I love to read, to study chinese and exercise.",
+  "standForTitle": "What I stand for?",
+  "standFor": "I stand for a balanced lifestyle and social justice mainly towards women, indigenous and black people.",
   "spanish": "Spanish",
   "english": "English",
   "chinese": "Chinese",
@@ -14,8 +18,5 @@
   "hireInfoPriority": "The project, idea or task has to give value to the people, don't be harmful to the environment and ensure a high quality process of developmet and engineering.",
   "hireInfoConditionsTitle": "Working conditions",
   "tSDescription": "I'm a full-stack developer who loves modern technologies as:",
-  "about": "What I most enjoy about programming is, the capability to put all the pieces together to buildquality solutions. I'm very critical and analytic. I enjoy coding with a purpose : to help, empower andimprove lives.  I love the internet, where my work  takes form. I’m  aware of the huge social impactthat technology has on modern society so I think it’s my responsibility to do this and to do good :)",
-  "articleDescription": "ABOUT VOLCANOES",
-  "article1StParagraph": "A volcano is a rupture in the crust of a planetary-mass object, such as Earth, that allows hot lava, volcanic ash, and gases to escape from a magma chamber below the surface.",
-  "article2NdParagraph": "Earth's volcanoes occur because its crust is broken into 17 major, rigid tectonic plates that float on a hotter, softer layer in its mantle. Therefore, on Earth, volcanoes are generally found where tectonic plates are diverging or converging, and most are found underwater."
+  "about": "What I most enjoy about programming is, the capability to put all the pieces together to buildquality solutions. I'm very critical and analytic. I enjoy coding with a purpose : to help, empower andimprove lives.  I love the internet, where my work  takes form. I’m  aware of the huge social impactthat technology has on modern society so I think it’s my responsibility to do this and to do good :)"
 }

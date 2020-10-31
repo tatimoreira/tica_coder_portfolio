@@ -2,16 +2,18 @@
   "welcome": "你好, 世界！",
   "description": "我是马迪亚,一位软件工程师, 网络程序员, 我是一位会说西班牙语，英语和汉语的人",
   "aboutMe": "关于我",
+  "hobbiesTitle": "我的爱好",
+  "hobbies": "我喜欢植物，喜欢读书，学习汉语和锻炼身体。",
+  "standForTitle": "什么我主张？",
+  "standFor": "我支持有平衡的生活方式和社会正义尤其是对妇女，土著和黑人的权利",
   "spanish": "西班牙语",
   "english": "英语",
   "chinese": "汉语",
   "aboutWork":"关于我的工作",
+  "missionTitle":"为什么我喜欢编程？",
+  "mission": "程式设计让我最享受的地方是用那些各个不同的的小区块，来建造与成型并为那高品质的人生带来更多的解决方案。我是一名具有高批判和分析力的程式设计员，我享受有目的并获得有答案的建构设计方案中，让我的设计可以强大可以造福人群还有改善每个人的生活品质。我非常的喜爱网际网路，透过不同的网路平台来建构我的事业与分享知识的领域，我也非常的清楚科技对现代社会造成了非常巨大的影响和改变。因此，我觉得我的职责与任务就是把这网路科技和程式设计做到最好，做到浅显易懂，让人人都可以轻松方便的使用这些设计好的各个领域。",
   "techStack": "技术栈",
   "tSDescription": "我是一个很爱现代技术的程序员:",
   "hireInfoTitle": "录用信息",
-  "hireInfoConditionsTitle": "工作环境",
-  "about": "SAMPLE TEXT",
-  "articleDescription": "ABOUT VOLCANOES",
-  "article1StParagraph": "A volcano is a rupture in the crust of a planetary-mass object, such as Earth, that allows hot lava, volcanic ash, and gases to escape from a magma chamber below the surface.",
-  "article2NdParagraph": "Earth's volcanoes occur because its crust is broken into 17 major, rigid tectonic plates that float on a hotter, softer layer in its mantle. Therefore, on Earth, volcanoes are generally found where tectonic plates are diverging or converging, and most are found underwater."
+  "hireInfoConditionsTitle": "工作环境"
 }
