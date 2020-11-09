@@ -24,5 +24,5 @@ yarn run dev
 
 ## Contact
 
-If you want to contact me you can reach me at tatib14@gmail.com.
+If you want to contact me you can reach me at tatimb14@gmail.com.
 
