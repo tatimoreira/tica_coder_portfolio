@@ -26,12 +26,12 @@ const LanguageSelector = () => {
   };
 
   return (
-    <div class='dropdown-menu absolute hidden h-auto flex shadow-xl z-10 bg-secondary '>
-      <ul class='block w-full bg-white shadow px-4 py-4'>
+    <div className='absolute z-10 flex hidden h-auto shadow-xl dropdown-menu bg-secondary '>
+      <ul className='block w-full px-4 py-4 bg-white shadow'>
         {languages.map((language, key) => (
-          <li className='font-bold text-primary hover:text-secondary p-1'>
+          <li className='p-1 font-bold text-primary hover:text-secondary'>
             <button
-              className='button special big whitespace-no-wrap'
+              className='whitespace-no-wrap button special big'
               onClick={() => onChangeLanguage(language.shortName)}
             >
               {t(language.name)}

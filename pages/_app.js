@@ -11,11 +11,15 @@ class MyApp extends App {
     const { Component, pageProps } = this.props;
 
     return (
-      <ThemeProvider defaultTheme='system'>
+      <ThemeProvider disableTransitionOnChange>
         <Component {...pageProps} />
       </ThemeProvider>
     );
   }
 }
+
+MyApp.getInitialProps = async (appContext) => ({
+  ...(await App.getInitialProps(appContext)),
+});
 
 export default appWithTranslation(MyApp);

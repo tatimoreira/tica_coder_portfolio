@@ -1,5 +1,5 @@
 {
-  "welcome": "Hello World!",
+  "greeting": "Hello World!",
   "description": "I'm Tatiana Moreira, a Software Engineer, a web lover and developer, a spanish/english/chinese speaker, a blockchain enthusiast based in Costa Rica.",
   "aboutMe": "About me",
   "hobbiesTitle": "My Hobbies",
@@ -13,10 +13,20 @@
   "missionTitle": "Why  do I code?",
   "mission": "What I enjoy most about programming is the ability to put all the pieces together to build quality solutions. I'm very critical and analytical. I enjoy building meaningful solutions which empower and improve people lives. I love the internet, where my work takes shape. I am aware of the enormous social impact that technology has on modern society, so I believe it is my responsibility to do this and do good.",
   "techStack": "Technology stack",
+  "myStack": "My stack: ",
+  "myLearningStack": "Tecnologies I'm learning: ",
+  "react": "ReactJS",
+  "graphql": "Graphql",
+  "nodejs": "NodeJS",
+  "golang": "Golang",
+  "eos": "EOS",
+  "rust": "Rust",
+  "webAssembly": "Web Assembly",
   "techStackText": "I believe in specialization, I like to be good at what I do that's why I'm picky of the technologies I choose to work, but for sure I'll be always learning something new to add to my technology stack.",
   "hireInfoTitle": "Hiring information",
   "hireInfoPriority": "The project, idea or task has to give value to the people, don't be harmful to the environment and ensure a high quality process of developmet and engineering.",
   "hireInfoConditionsTitle": "Working conditions",
+  "hireInfoConditions": "I work remotely, ideally you will provide the job equipment.",
   "tSDescription": "I'm a full-stack developer who loves modern technologies as:",
   "about": "What I most enjoy about programming is, the capability to put all the pieces together to buildquality solutions. I'm very critical and analytic. I enjoy coding with a purpose : to help, empower andimprove lives.  I love the internet, where my work  takes form. I’m  aware of the huge social impactthat technology has on modern society so I think it’s my responsibility to do this and to do good :)"
 }

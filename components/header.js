@@ -1,7 +1,9 @@
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { useTheme, localStorage } from "next-themes";
+import LanguageSelector from "./LanguageSelector";
+import { useLocalStorage } from "../hooks/useLocalStorage";
 
 const languages = [
   {
@@ -18,16 +20,27 @@ const languages = [
   },
 ];
 
-import LanguageSelector from "./LanguageSelector";
-
 function Header() {
   const { t, i18n } = useTranslation();
   const [isExpanded, toggleExpansion] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
+  const [lang, setLang] = useLocalStorage("lang", i18n.language);
 
   const onChangeLanguage = (language) => {
     i18n.changeLanguage(language);
+    setLang(language);
   };
+
+  useEffect(() => {
+    i18n.changeLanguage(lang);
+    document.documentElement.lang = lang;
+  }, [lang]);
+
+  // When mounted on client, now we can show the UI
+  useEffect(() => setMounted(true), []);
+
+  if (!mounted) return null;
 
   return (
     <nav className='relative bg-background'>
@@ -68,11 +81,12 @@ function Header() {
         <ul
           className={`${
             isExpanded ? `block` : `hidden`
-          } pr-4 md:flex flex-col md:flex-row md:items-center md:justify-center text-sm w-full md:w-auto`}
+          }  md:flex flex-col md:flex-row md:items-center md:justify-center text-sm w-full md:w-auto`}
         >
           <li className='flex justify-center h-10 mt-1 md:hidden bg-inverse'>
             {languages.map((language, key) => (
               <button
+                key={key}
                 className='p-1 m-1 font-bold border-2 rounded-sm rounded text-s text-primary border-primary'
                 onClick={() => onChangeLanguage(language.shortName)}
               >
@@ -96,7 +110,7 @@ function Header() {
           </li>
           {[
             { title: t("aboutMe"), route: "/" },
-            { title: t("aboutWork"), route: "/about" },
+            { title: t("aboutWork"), route: "/about-work" },
           ].map((navigationItem) => (
             <li
               className='flex justify-center h-10 mt-1 text-lg font-bold text-primary bg-inverse md:hidden'
