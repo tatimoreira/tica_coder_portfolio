@@ -8,11 +8,11 @@
     "analyze": "npm run analyze:tailwind-css-class-order",
     "fix:tailwind-css-class-order": "rustywind --write .",
     "fix": "npm run fix:tailwind-css-class-order",
-    "export": "npm run build && next export",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "export": "next export"
   },
   "repository": {
     "type": "git",

@@ -1,4 +1,4 @@
-# TICACODER
+# [TICACODER](https://ticacoder.netlify.app/)
 My personal site, version 1!`
 
 
