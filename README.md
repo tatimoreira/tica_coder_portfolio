@@ -1,4 +1,4 @@
-# [TICACODER](https://www.tatimoreira.dev/)
+# [TatiMoreira](https://www.tatimoreira.dev/)
 My personal site, version 1!`
 
 

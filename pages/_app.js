@@ -18,8 +18,16 @@ class MyApp extends App {
   }
 }
 
-MyApp.getInitialProps = async (appContext) => ({
-  ...(await App.getInitialProps(appContext)),
-});
+MyApp.getInitialProps = async (appContext) => {
+  const appProps = await App.getInitialProps(appContext);
+
+  return {
+    ...appProps,
+    pageProps: {
+      namespacesRequired: ["common"]
+    }
+  }
+
+};
 
 export default appWithTranslation(MyApp);

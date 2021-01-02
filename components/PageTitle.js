@@ -7,14 +7,14 @@ function PageTitle({ text }) {
       animate='visible'
       variants={{
         hidden: {
-          scale: 0.8,
+          scale: 0.5,
           opacity: 0,
         },
         visible: {
           scale: 1,
-          opacity: 1,
+          opacity: 5,
           transition: {
-            delay: 0.4,
+            delay: 0.6,
           },
         },
       }}

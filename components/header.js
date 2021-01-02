@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 import { useTheme, localStorage } from "next-themes";
 import LanguageSelector from "./LanguageSelector";
 import { useLocalStorage } from "../hooks/useLocalStorage";
+import { motion } from "framer-motion";
 
 const languages = [
   {
@@ -48,18 +49,23 @@ function Header() {
         <div className='flex items-center'>
           <Link href='/'>
             <a className='text-xl font-bold text-secondary md:ml-8'>
-              TicaCoder
+              TatiMoreira
             </a>
           </Link>
           <div className='hidden md:flex '>
             {languages.map((language, key) => (
-              <button
-                key={key}
-                className='p-1 m-1 font-bold border-2 rounded-sm rounded text-s text-primary border-primary'
-                onClick={() => onChangeLanguage(language.shortName)}
+              <motion.button
+                whileHover={{ scale: 1.1 }}
               >
-                {t(language.name)}
-              </button>
+                <button
+                  key={key}
+                  className='p-1 m-1 font-bold rounded-full border-2 rounded-sm text-s text-primary '
+                  onClick={() => onChangeLanguage(language.shortName)}
+                >
+                  {t(language.name)}
+                </button>
+              </motion.button>
+
             ))}
           </div>
         </div>
@@ -79,9 +85,8 @@ function Header() {
         </button>
 
         <ul
-          className={`${
-            isExpanded ? `block` : `hidden`
-          }  md:flex flex-col md:flex-row md:items-center md:justify-center text-sm w-full md:w-auto`}
+          className={`${isExpanded ? `block` : `hidden`
+            }  md:flex flex-col md:flex-row md:items-center md:justify-center text-sm w-full md:w-auto`}
         >
           <li className='flex justify-center h-10 mt-1 md:hidden bg-inverse'>
             {languages.map((language, key) => (
