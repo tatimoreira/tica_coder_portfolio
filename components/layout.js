@@ -46,6 +46,7 @@ function Layout({ children, mainClasses = "", isLight = false }) {
       <Head>
         <title>TatiMoreira</title>
         <meta name='viewport' content='initial-scale=1.0, width=device-width' />
+        <link rel="shortcut icon" href="/static/imgs/favicon.ico" />
       </Head>
       <Header />
 
