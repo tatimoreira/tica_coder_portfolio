@@ -1,9 +1,11 @@
 import React, { useContext, useEffect, useState } from "react";
+import { faFemale } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { useRouter } from 'next/router';
 
-function NavBarItem({ onClick, title, route, color }) {
+function NavBarItem({ onClick, title, route, color, icon }) {
     const router = useRouter();
     const [selected, setSelected] = useState(false);
 
@@ -16,32 +18,15 @@ function NavBarItem({ onClick, title, route, color }) {
     return (
 
         <li
-            className='pb-5 mt-3 text-lg font-bold'
+            className='pb-5 mt-3 text-lg font-bold font-custom'
             key={title}
 
         >
-            <div className='flex items-center text-secondary '>
-                <svg
-                    className='w-6 h-6'
-                    fill='none'
-                    stroke='currentColor'
-                    viewBox='0 0 24 24'
-                    xmlns='http://www.w3.org/2000/svg'
-                >
-                    <path
-                        strokeLinecap='round'
-                        strokeLinejoin='round'
-                        strokeWidth='2'
-                        d='M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z'
-                    ></path>
-                </svg>
-                <Link href={route} passHref>
-                    <a className='block p-1 text-primary' onClick={onClick}>
-                        {title}
-                    </a>
-                </Link>
-
-            </div>
+            <Link href={route} passHref>
+                <a className='block p-1 text-primary' onClick={onClick}>
+                    {icon}
+                </a>
+            </Link>
             <motion.div
                 layoutId={title}
                 className={selected ? "border rounded-sm rounded border-secondary" : null}

@@ -1,7 +1,11 @@
 import { motion } from "framer-motion";
 
 function Paragraph({ text }) {
-  return <p className='text-2xl text-inverse-soft '> {text}</p>;
+  return (
+    <>
+      <p className='inline text-inverse-soft text-lg'> {text}</p>
+    </>
+  );
 }
 
 export default Paragraph;

@@ -1,10 +1,15 @@
 import React, { useContext, useEffect, useState } from "react";
-import Head from "next/head";
+//import Head from "next/head";
 import { AnimateSharedLayout } from "framer-motion";
 
 import { useTranslation } from "react-i18next";
+import { faFemale, faLaptop, faSmile } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import Header from "./header";
+import UpperHeader from "./UpperHeader";
+import { Head } from "./Head";
+
 import Footer from "./footer";
 import NavBarItem from "./NavBarItem";
 import ThemeContext from "../context/ThemeContext";
@@ -22,8 +27,8 @@ function Layout({ children, mainClasses = "", isLight = false }) {
 
   const navBarItems =
     [
-      { title: t("aboutMe"), route: "/", color: "#1763aa" },
-      { title: t("aboutWork"), route: "/about-work", color: "#1763aa" },
+      { title: t("aboutMe"), route: "/", color: "#1763aa", icon: <FontAwesomeIcon icon={faSmile} /> },
+      { title: t("aboutWork"), route: "/about-work", color: "#7e7e7e", icon: <FontAwesomeIcon icon={faLaptop} /> },
     ];
   const [selected, setSelected] = useState(navBarItems[0]);
 
@@ -43,14 +48,32 @@ function Layout({ children, mainClasses = "", isLight = false }) {
       className={`${theme === "dark" ? "dark" : "light"
         } flex flex-col min-h-screen bg-background `}
     >
-      <Head>
-        <title>TatiMoreira</title>
-        <meta name='viewport' content='initial-scale=1.0, width=device-width' />
-        <link rel="shortcut icon" href="/static/imgs/favicon.ico" />
+      <Head title="TatiMoreira" link="/static/imgs/favicon.ico">
       </Head>
+      <UpperHeader />
       <Header />
+      <main className='flex-1 overflow-x-auto md:mr-12 md:ml-12  font-custom flex h-5/6' >
+        <aside className='hidden float-left sideBar bg-explorer md:block '>
+          <AnimateSharedLayout>
+            <ul className='p-10'>
+              {navBarItems.map((navigationItem) => {
+                return (
+                  <NavBarItem
+                    key={navigationItem.route}
+                    title={navigationItem.title}
+                    route={navigationItem.route}
+                    color={navigationItem.color}
+                    icon={navigationItem.icon}
+                    onClick={() => setSelected(navigationItem)}></NavBarItem>
+                )
+              })}
+            </ul>
+          </AnimateSharedLayout>
+        </aside>
+        {children}
+      </main>
 
-      <main className='flex-1 overflow-x-auto md:mr-12 md:ml-12 bg-foreground'>
+      {/*<main className='flex-1 overflow-x-auto md:mr-12 md:ml-12 bg-foreground font-custom' >
         <aside className='hidden float-left w-1/5 border-2 border-solid sideBar bg-background md:block border-secondary'>
           <AnimateSharedLayout>
             <ul className='p-10'>
@@ -68,7 +91,7 @@ function Layout({ children, mainClasses = "", isLight = false }) {
           </AnimateSharedLayout>
         </aside>
         {children}
-      </main>
+            </main>*/}
       <Footer />
     </div>
   );

@@ -1,8 +1,9 @@
 {
   "greeting": "¡Hola Mundo!",
-  "description": "Soy Tatiana Moreira, una Ingeniera de Software, una programadora web, una entusiasta de blockchain, una tica que habla inglés, español y mandarín.",
+  "description": "Mi nombre es Tati soy una Ingeniera de Software, actualmente estoy trabajando en Parsley Health como programadora web. Hablo inglés, español y mandarín. Programo desde los trópicos en la hermosa Costa Rica.",
   "aboutMe": "Sobre mi",
-  "hobbiesTitle": "Mis pasatiempos",
+  "factsTitle": "Datos sobre mi",
+  "facts": "Vivií dos años en Nankín China. Soy una mujer independiente y una lesbina orgullosa que vive sola sin mascotas, solo plantas. En mi tiempo libre leo literatura de mujeres, me ejercito como un hamster en mi propio apartamento y estudio bribri (que es un idioma nativo de un grupo étnico costarricense) y mandarín.",
   "hobbies": "Me gustan las plantas, me encanta leer, estudiar chino y hacer ejercicio.",
   "standForTitle": "¿Qué apoyo?",
   "standFor": "Soy defensora de un estilo de vida equilibrado y de la justicia social principalmente hacia las mujeres, los indígenas y los negros.",
@@ -14,19 +15,14 @@
   "mission": "Lo que más disfruto de programar es la capacidad de unir todas las piezas para construir soluciones de calidad. Soy muy crítica y analítica. Disfruto construir soluciones con propósito, empoderar y mejorar vidas. Amo el Internet, donde toma forma mi trabajo. Soy consciente del enorme impacto social que tiene la tecnología en la sociedad moderna, así que creo que es mi responsabilidad hacer esto y hacer el bien.",
   "techStack": "Tecnologías",
   "myStack": "Las tecnologías que trabajo: ",
-  "myLearningStack": "Tecnologías que estoy aprendiendo: ",
   "react": "ReactJS",
   "graphql": "Graphql",
   "nodejs": "NodeJS",
   "golang": "Golang",
-  "rust": "Rust",
-  "eos": "EOS",
-  "webAssembly": "Web Assembly",
-  "techStackText":"Yo creo en la especialización, me gusta ser buena en lo que hago, estoy enfocada en el camino profesional que deseo tomar, por eso soy quisquillosa con las tecnologías que elijo para trabajar, pero de seguro que siempre estaré aprendiendo algo nuevo para agregar a mis habilidades.",
+  "techStackText": "Yo creo en la especialización, me gusta ser buena en lo que hago, estoy enfocada en el camino profesional que deseo tomar, por eso soy quisquillosa con las tecnologías que elijo para trabajar, pero de seguro que siempre estaré aprendiendo algo nuevo para agregar a mis habilidades.",
   "hireInfoTitle": "Información de contratación",
   "hireInfoPriority": "El proyecto, idea o tarea debe de ser de valor para las personas, no dañar el medio ambiente y asegurar un proceso de desarrollo e ingeniería de alta calidad.",
-  "hireInfoConditionsTitle" : "Condiciones del trabajo",
+  "hireInfoConditionsTitle": "Condiciones del trabajo",
   "tSDescription": "Soy una desarrolladora full-stack que ama trabajar con tecnologías modernas como:",
   "about": "Lo que más disfruto de programar es la capacidad de unir todas las piezas para construir soluciones de calidad. Soy muy crítica y analítica. Disfruto construir soluciones con propósito, empoderar y mejorar vidas. Amo el Internet, donde toma forma mi trabajo. Soy consciente del enorme impacto social que tiene la tecnología en la sociedad moderna, así que creo que es mi responsabilidad hacer esto y hacer el bien"
- 
 }

@@ -1,22 +1,35 @@
 @tailwind base;
 
 :root {
+  --color-bg-red: #ff5b5b;
+  --color-bg-green: #00ff00;
+  --color-bg-yellow: #ffea2e;
+
   --color-bg-foreground: #fafafa;
-  --color-bg-background: #fafafa;
+  --color-bg-background: #E4E3E2;
   --color-bg-primary: #ff5851;
   --color-bg-secondary: #fafafa;
   --color-bg-default: #fff;
   --color-bg-inverse: #eeeeee;
+  --color-bg-colorPop1: #41D05A;
+  --color-bg-colorPop2: #ED7DB0;
+  --color-bg-colorPop3: #E9BC3F;
 
-  --color-text-primary: #ae47ac;
-  --color-text-secondary: #1763aa;
-  --color-text-default: #444;
+  --color-bg-header: #a0a1a7;
+  --color-bg-explorer: #eeeeee;
+  --color-bg-explorer: #eeeeee;
+
+  --color-text-primary: #9371a5;
+  --color-text-secondary: #69B2C5;
+  --color-text-default: #E9BC3F;
   --color-text-default-soft: #999;
   --color-text-inverse: #22751f;
-  --color-text-inverse-soft: #767676;
+  --color-text-inverse-soft:  #7e7e7e;
+  --color-text-explorer1: #7e7e7e;
+  --color-text-white: #FFFFFF;
 
-  --font-display: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --font-body: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-display: "Robot Mono", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-body: "Robot Mono", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
   --font-weight-normal: 400;
   --font-weight-display: 400;
@@ -30,23 +43,34 @@
 
 /** purgecss start ignore */
 .dark {
+  --color-bg-red: #ff5b5b;
+  --color-bg-green: #00ff00;
+  --color-bg-yellow: #ffea2e;
+
+  --color-bg-header: #424242;
+  --color-bg-explorer: #3d3d3d;
+
   --color-bg-foreground: #444b58;
   --color-bg-background: #30363e;
   --color-bg-primary: #5cdb95;
   --color-bg-secondary: #3d434f;
   --color-bg-default: #27241d;
   --color-bg-inverse: #373737;
+  --color-bg-colorPop1: #2F8BD2;
+  --color-bg-colorPop2: #DD4480;
 
   --color-text-comment: #636d83;
   --color-text-primary: #5cdb95;
   --color-text-secondary: #bc85f9;
-  --color-text-default: #373737;
+  --color-text-default: #D4417B;
   --color-text-default-soft: #ffe380;
   --color-text-inverse: #99ffff;
   --color-text-inverse-soft: #bbb;
 
-  --font-display: Georgia, Times, "Times New Roman", serif;
-  --font-body: Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans",
+  --color-text-explorer1: #7e7e7e;
+
+  --font-display: "Robot Mono", Georgia, Times, "Times New Roman", serif;
+  --font-body: "Robot Mono", Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans",
     "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana,
     "Verdana Ref", sans-serif;
 
@@ -54,7 +78,7 @@
   --font-weight-display: 400;
   --font-weight-btn: 600;
 
-  --rounded-btn: 0;
+  --rounded-btn: 0.25rem;
 
   --color-border-primary: #5cdb95;
   --color-border-secondary: #bc85f9;

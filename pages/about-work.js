@@ -10,8 +10,8 @@ function AboutPage() {
 
   return (
     <Layout>
-      <div className='flex flex-col pl-8 pr-8 md:pr-16 md:pl-16 md:border-t-2 md:border-b-2 md:border-r-2 md:border-solid bg-foreground sideBar md:border-secondary'>
-        <div className='pt-8 pb-8 overflow-auto'>
+      <div className='flex flex-col pl-8 pr-8 md:pr-16 md:pl-16 bg-foreground sideBar '>
+        <div className='pt-12 pb-8 overflow-auto'>
           <PageTitle text={t("aboutWork")}></PageTitle>
           <SubTitle text={t("missionTitle")} />
           <Paragraph text={t("mission")} />
@@ -23,39 +23,17 @@ function AboutPage() {
               (item, key) => (
                 <span
                   key={item}
-                  className='p-1 m-1 font-bold border-2 rounded text-s text-inverse '
+                  className='mr-5 font-bold text-s text-default'
                 >
                   {t(item)}
                 </span>
               )
             )}
           </div>
-          <Paragraph text={t("myLearningStack")} />
-          <div className='pt-1 pb-1 md:flex'>
-            {[t("rust"), t("eos"), t("webAssembly")].map((item, key) => (
-              <span
-                key={item}
-                className='p-1 m-1 font-bold border-2 rounded-sm rounded text-s text-inverse '
-              >
-                {t(item)}
-              </span>
-            ))}
-          </div>
-
-          <h2 className='pt-2 text-2xl font-bold text-primary'>
-            {t("hireInfoTitle")}
-          </h2>
-          <p className='text-2xl text-inverse-soft '>
-            {" "}
-            {t("hireInfoPriority")}
-          </p>
-          <h2 className='pt-2 text-2xl font-bold text-primary'>
-            {t("hireInfoConditionsTitle")}
-          </h2>
-          <p className='pb-3 text-2xl text-inverse-soft'>
-            {" "}
-            {t("hireInfoConditions")}
-          </p>
+          <SubTitle text={t("hireInfoTitle")} />
+          <Paragraph text={t("hireInfoPriority")} />
+          <SubTitle text={t("hireInfoConditionsTitle")} />
+          <Paragraph text={t("hireInfoConditions")} />
         </div>
       </div>
     </Layout>

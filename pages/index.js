@@ -17,14 +17,18 @@ function IndexPage() {
 
   return (
     <Layout>
-      <div className='flex flex-col pl-8 pr-8 md:pr-16 md:pl-16 md:border-t-2 md:border-b-2 md:border-r-2 md:border-solid bg-foreground sideBar md:border-secondary'>
-        <div className='pt-8'>
-          <PageTitle text={t("greeting")}></PageTitle>
-          <Paragraph text={t("description")}></Paragraph>
-          <Subtitle text={t("hobbiesTitle")}></Subtitle>
-          <Paragraph text={t("hobbies")}></Paragraph>
-          <Subtitle text={t("standForTitle")}></Subtitle>
-          <Paragraph text={t("standFor")}></Paragraph>
+      <div className="explorer bg-explorer flex-col"></div>
+      <div className='flex flex-col pl-8 pr-8 pb-8  md:pr-16 md:pl-16  bg-foreground sideBar  h-5/6 '>
+        <div >
+          <div className="inner-content flex-row  flex relative">
+            <div className="content  pt-12 pr-6 pl-6 mt-7">
+              <PageTitle text={t("greeting")}></PageTitle>
+              <Paragraph text={t("description")}></Paragraph>
+              <PageTitle text={t("factsTitle")}></PageTitle>
+              <Paragraph text={t("facts")}></Paragraph>
+            </div>
+          </div>
+
         </div>
       </div>
     </Layout>

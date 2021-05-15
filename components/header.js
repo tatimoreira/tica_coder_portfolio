@@ -47,19 +47,14 @@ function Header() {
     <nav className='relative bg-background'>
       <div className='flex flex-wrap items-center justify-between p-4 mx-auto md:flex-no-wrap '>
         <div className='flex items-center'>
-          <Link href='/'>
-            <a className='text-xl font-bold text-secondary md:ml-8'>
-              TatiMoreira
-            </a>
-          </Link>
-          <div className='hidden md:flex '>
+          <div className='hidden md:flex ml-6'>
             {languages.map((language, key) => (
               <motion.button
                 whileHover={{ scale: 1.1 }}
               >
                 <button
                   key={key}
-                  className='p-1 m-1 font-bold rounded-full border-2 rounded-sm text-s text-primary '
+                  className='p-1 m-1 font-bold rounded-full border-2 text-s text-white bg-colorPop1'
                   onClick={() => onChangeLanguage(language.shortName)}
                 >
                   {t(language.name)}
@@ -67,9 +62,11 @@ function Header() {
               </motion.button>
 
             ))}
+            
           </div>
         </div>
 
+        {/*Hamburguer*/}
         <button
           className='flex items-center block px-3 py-2 border-2 rounded border-secondary md:hidden'
           onClick={() => toggleExpansion(!isExpanded)}
@@ -84,6 +81,7 @@ function Header() {
           </svg>
         </button>
 
+        {/* Mobile */}
         <ul
           className={`${isExpanded ? `block` : `hidden`
             }  md:flex flex-col md:flex-row md:items-center md:justify-center text-sm w-full md:w-auto`}
@@ -92,22 +90,22 @@ function Header() {
             {languages.map((language, key) => (
               <button
                 key={key}
-                className='p-1 m-1 font-bold border-2 rounded-sm rounded text-s text-primary border-primary'
+                className='p-1 m-1 font-bold border-2 rounded-full text-s text-white  bg-colorPop1'
                 onClick={() => onChangeLanguage(language.shortName)}
               >
                 {t(language.name)}
               </button>
             ))}
           </li>
-          <li className='flex justify-center w-full h-10 mt-1 mr-3 bg-inverse md:bg-background'>
+          <li className='flex justify-center w-full h-10 mt-1 mr-6 bg-inverse md:bg-background'>
             <button
-              className='p-1 m-1 font-bold border-2 rounded-sm rounded text-s text-primary border-primary'
+              className='p-1 m-1 font-bold border-2 rounded-full  text-s text-white  bg-colorPop2 '
               onClick={() => setTheme("light")}
             >
               LIGHT
             </button>
             <button
-              className='p-1 m-1 font-bold border-2 rounded-sm rounded text-s text-primary border-primary'
+              className='p-1  m-1 font-bold border-2 rounded-full  text-s text-white  bg-colorPop2'
               onClick={() => setTheme("dark")}
             >
               DARK
@@ -118,11 +116,11 @@ function Header() {
             { title: t("aboutWork"), route: "/about-work" },
           ].map((navigationItem) => (
             <li
-              className='flex justify-center h-10 mt-1 text-lg font-bold text-primary bg-inverse md:hidden'
+              className='flex justify-center h-10 mt-1 text-base font-bold text-primary bg-inverse md:hidden'
               key={navigationItem.title}
             >
               <Link href={navigationItem.route}>
-                <a className='block text-white'>{navigationItem.title}</a>
+                <a className='block text-primary '>{navigationItem.title}</a>
               </Link>
             </li>
           ))}

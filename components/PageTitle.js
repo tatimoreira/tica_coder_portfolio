@@ -19,7 +19,7 @@ function PageTitle({ text }) {
         },
       }}
     >
-      <h1 className='text-4xl font-bold md:text-6xl text-secondary'>
+      <h1 className=' font-bold text-xl text-secondary  inline '>
         <span>{text}</span>
       </h1>
     </motion.div>
