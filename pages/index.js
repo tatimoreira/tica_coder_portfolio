@@ -21,7 +21,7 @@ function IndexPage() {
       <div className='flex flex-col pl-8 pr-8 pb-8  md:pr-16 md:pl-16  bg-foreground sideBar  h-5/6 '>
         <div >
           <div className="inner-content flex-row  flex relative">
-            <div className="content  pt-12 pr-6 pl-6 mt-7">
+            <div className="content  pt-12  mt-7">
               <PageTitle text={t("greeting")}></PageTitle>
               <Paragraph text={t("description")}></Paragraph>
               <PageTitle text={t("factsTitle")}></PageTitle>

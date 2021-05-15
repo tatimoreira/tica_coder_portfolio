@@ -16,9 +16,7 @@ function AboutPage() {
           <SubTitle text={t("missionTitle")} />
           <Paragraph text={t("mission")} />
           <SubTitle text={t("techStack")} />
-
-          <Paragraph text={t("myStack")} />
-          <div className='pt-1 pb-2 md:flex'>
+          <div className='pt-1  md:flex'>
             {[t("react"), t("nodejs"), t("graphql"), t("golang")].map(
               (item, key) => (
                 <span
