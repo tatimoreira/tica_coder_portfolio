@@ -21,7 +21,7 @@ function IndexPage() {
   return (
     <Layout>
       <div className="explorer bg-explorer flex-col"></div>
-      <div className='flex flex-col pl-8 pr-8 pb-8  md:pr-16 md:pl-16  bg-foreground sideBar  h-5/6 '>
+      <div className='flex flex-col pl-8 pr-8 pb-8  md:pr-16 md:pl-16  bg-foreground sideBar  h-5/6  w-full'>
       
           <article className="inner-content flex-row  flex relative">
             <div className="content  pt-12  mt-7">
@@ -31,9 +31,9 @@ function IndexPage() {
               </section>
               <section role="contentinfo" aria-label="My education">
                 <Subtitle text={t("eduTitle")} />
-                <Paragraph text={t("eduText")}></Paragraph>
-              </section>    
-              <ul>
+                <Paragraph text={t("eduText")}></Paragraph>              
+              </section>   
+              <ul className="mt-3">
                 <li><Paragraph text={t("edu1")}></Paragraph></li>
                 <li><Paragraph text={t("edu2")}></Paragraph></li>
               </ul>

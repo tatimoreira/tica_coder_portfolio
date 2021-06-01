@@ -1,10 +1,10 @@
 {
   "greeting": "¡Hola Mundo!",
-  "description": "Mi nombre es Tati soy una Ingeniera de Software, actualmente estoy trabajando en Parsley Health como programadora web. Hablo inglés, español y mandarín. Programo desde los trópicos en la hermosa Costa Rica.",
+  "description": "Mi nombre es Tati soy una Ingeniera de Software, actualmente estoy trabajando en <0>Parsley Health</0> como programadora web. Hablo inglés, español y mandarín. Programo desde los trópicos en la hermosa Costa Rica.",
   "factsTitle": "Datos sobre mi",
   "facts": "Vivií dos años en Nankín China. Soy una mujer independiente y una lesbina orgullosa que vive sola sin mascotas, solo plantas. En mi tiempo libre leo literatura de mujeres, me ejercito como un hamster en mi propio apartamento y estudio bribri (que es un idioma nativo de un grupo étnico costarricense) y mandarín.",
   "eduTitle": "Educación",
-  "eduText": "Ya a nadie le importa esto, verdad?",
+  "eduText": "¿Ya a nadie le importa esto, verdad?",
   "edu1": "2016-2018 NUIST, China - Master en Ciencias de la Computación ",
   "edu2": "2009-2015 UNA, Costa Rica - Bachiller en Ciencias de la Computación ",
   "spanish": "Español",
