@@ -114,6 +114,8 @@ function Header() {
           {[
             { title: t("aboutMe"), route: "/" },
             { title: t("aboutWork"), route: "/about-work" },
+            { title: t("experience"), route: "/experience" },
+            { title: t("contact"), route: "/contact" },
           ].map((navigationItem) => (
             <li
               className='flex justify-center h-10 mt-1 text-base font-bold text-primary bg-inverse md:hidden'

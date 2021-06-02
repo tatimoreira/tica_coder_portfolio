@@ -15,14 +15,11 @@ const config = {
 
 function IndexPage() {
   const { t, i18n } = useTranslation();
-
-
-
+  
   return (
     <Layout>
       <div className="explorer bg-explorer flex-col"></div>
       <div className='flex flex-col pl-8 pr-8 pb-8  md:pr-16 md:pl-16  bg-foreground sideBar  h-5/6  w-full'>
-      
           <article className="inner-content flex-row  flex relative">
             <div className="content  pt-12  mt-7">
               <section role="contentinfo" aria-label="Facts about me" className="mb-6">
