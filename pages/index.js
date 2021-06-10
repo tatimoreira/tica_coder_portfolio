@@ -32,7 +32,7 @@ function IndexPage() {
               </section>   
               <ul className="mt-3">
                 <li><Paragraph text={t("edu1")}></Paragraph></li>
-                <li><Paragraph text={t("edu2")}></Paragraph></li>
+                <li className="mt-4"><Paragraph text={t("edu2")}></Paragraph></li>
               </ul>
             </div>
           </article>

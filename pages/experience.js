@@ -15,6 +15,12 @@ function Experience() {
           <PageTitle text={t("experience")}></PageTitle>
           <ul className="mt-3">
               <li><Paragraph text={t("job1")}></Paragraph></li>
+              <li className="mt-4"><Paragraph text={t("job2")}></Paragraph></li>
+              <li className="mt-4"><Paragraph text={t("job3")}></Paragraph></li>
+              <li className="mt-4"><Paragraph text={t("job4")}></Paragraph></li>
+              <li className="mt-4"><Paragraph text={t("job5")}></Paragraph></li>
+              <li className="mt-4"><Paragraph text={t("job6")}></Paragraph></li>
+              <li className="mt-4"><Paragraph text={t("job7")}></Paragraph></li>
           </ul>
         </div>
       </div>
