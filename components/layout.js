@@ -3,7 +3,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { AnimateSharedLayout } from "framer-motion";
 
 import { useTranslation } from "react-i18next";
-import { faFemale, faLaptop, faSmile, faCode, faAddressCard} from '@fortawesome/free-solid-svg-icons'
+import { faFemale, faLaptop, faSmile, faCode, faAddressCard, faFileSignature} from '@fortawesome/free-solid-svg-icons'
 import {  faGithub } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
@@ -32,6 +32,7 @@ function Layout({ children, mainClasses = "", isLight = false }) {
       { title: t("aboutWork"), route: "/about-work", color: "#7e7e7e", icon: <FontAwesomeIcon icon={faLaptop} /> },
       { title: t("experience"), route: "/experience", color: "#7e7e7e", icon: <FontAwesomeIcon icon={faCode} /> },
       { title: t("contact"), route: "/contact", color: "#7e7e7e", icon: <FontAwesomeIcon icon={faAddressCard} /> },
+      { title: t("blog"), route: "/blog", color: "#7e7e7e", icon: <FontAwesomeIcon icon={faFileSignature} /> },
     ];
 
     const ContactItems =

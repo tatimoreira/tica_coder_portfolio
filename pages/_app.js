@@ -9,7 +9,6 @@ import { ThemeProvider } from "next-themes";
 class MyApp extends App {
   render() {
     const { Component, pageProps } = this.props;
-
     return (
       <ThemeProvider disableTransitionOnChange>
         <Component {...pageProps} />
@@ -20,7 +19,6 @@ class MyApp extends App {
 
 MyApp.getInitialProps = async (appContext) => {
   const appProps = await App.getInitialProps(appContext);
-
   return {
     ...appProps,
     pageProps: {

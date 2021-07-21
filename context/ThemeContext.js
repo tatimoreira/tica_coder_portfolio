@@ -27,7 +27,7 @@ const ThemeProvider = ({ children }) => {
 
   const toggleTheme = () => {
     storedTheme === "dark" ? setTheme("light") : setTheme("dark");
-    console.log("tema", storedTheme);
+  
   };
   return (
     <ThemeContext.Provider
