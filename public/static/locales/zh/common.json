@@ -1,7 +1,7 @@
 {
   "greeting": "你好, 世界！",
   "description": "我是马蒂亚一个程序员，现在我在<0>Parsley Health</0>工作。我会说西班牙语，英语和汉语。我在哥斯达黎加工作。",
-  "eduTitle": "教育",
+  "eduTitle": "正规教育",
   "eduText": "没有人再在乎这个了吧？",
   "edu1": "2016-2018 NUIST, 南京 中国 - 计算机科学硕士学位 ",
   "edu2": "2009-2015 UNA, 埃雷迪亚 哥斯达黎加 - 计算机科学学士学位",
@@ -11,6 +11,39 @@
   "aboutWork": "关于我的工作",
   "aboutMe": "关于我",
   "experience": "工作经验",
+  "jobsArray": [
+    {
+      "companyName": "Parsley Health",
+      "companyLink": "https://www.parsleyhealth.com/",
+      "date": "Dic. 2020 - Currently",
+      "position": "Full Stack Developer",
+      "mode": "(Remote Contractor)"
+    },
+    {
+      "companyName": "TradeStation",
+      "date": "Abr. 2020 - Dic. 2020 ",
+      "position": "Full Stack Developer",
+      "mode": "(Remote Contractor)"
+    },
+    {
+      "companyName": "Proximity",
+      "date": "Jun. 2019 - Abr. 2020 ",
+      "position": "Front End Developer",
+      "mode": "(Contractor)"
+    },
+    {
+      "companyName": "Softon",
+      "date": "Jun. 2019 - Abr. 2020 ",
+      "position": "Front End Developer",
+      "mode": "(Contractor)"
+    },
+    {
+      "companyName": "GreenCube",
+      "date": "Jun. 2019 - Abr. 2020 ",
+      "position": "Front End Developer",
+      "mode": "(Remote Contractor)"
+    }
+  ],
   "job1": "Dic. 2020 - 现在 Parsley Health, 纽约美国 - 全栈开发人员",
   "job2": "Abr. 2020 - Dic. 2020 TradeStation, 德克萨斯州美国 - 全栈开发人员 ",
   "job3": "Jun. 2019 - Abr. 2020 Proximity, San Jose CR - 全栈开发人员 ",
@@ -29,7 +62,6 @@
   "contact": "联系",
   "contactInfo": "通过电子邮件与我联系，我也是千禧一代，请随时关注我并打个招呼:P",
 
-  
   "missionTitle": "为什么我喜欢编程？",
   "mission": "程式设计让我最享受的地方是用那些各个不同的的小区块，来建造与成型并为那高品质的人生带来更多的解决方案。我是一名具有高批判和分析力的程式设计员，我享受有目的并获得有答案的建构设计方案中，让我的设计可以强大可以造福人群还有改善每个人的生活品质。我非常的喜爱网际网路，透过不同的网路平台来建构我的事业与分享知识的领域，我也非常的清楚科技对现代社会造成了非常巨大的影响和改变。因此，我觉得我的职责与任务就是把这网路科技和程式设计做到最好，做到浅显易懂，让人人都可以轻松方便的使用这些设计好的各个领域。",
   "techStack": "技术栈",

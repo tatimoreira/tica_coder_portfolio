@@ -1,7 +1,7 @@
 {
   "greeting": "¡Hola Mundo!",
   "description": "Mi nombre es Tati soy una Ingeniera de Software, actualmente estoy trabajando en <0>Parsley Health</0> como programadora web. Hablo inglés, español y mandarín. Programo desde los trópicos en la hermosa Costa Rica.",
-  "eduTitle": "Educación",
+  "eduTitle": "Educación Formal",
   "eduText": "¿Ya a nadie le importa esto, verdad?",
   "edu1": "2016-2018 NUIST, China - Master en Ciencias de la Computación ",
   "edu2": "2009-2015 UNA, Costa Rica - Bachiller en Ciencias de la Computación ",
@@ -11,6 +11,39 @@
   "aboutWork": "Sobre mi trabajo",
   "aboutMe": "Sobre de mi",
   "experience": "Experiencia",
+  "jobsArray": [
+    {
+      "companyName": "Parsley Health",
+      "companyLink": "https://www.parsleyhealth.com/",
+      "date": "Dic. 2020 - Currently",
+      "position": "Full Stack Developer",
+      "mode": "(Remote Contractor)"
+    },
+    {
+      "companyName": "TradeStation",
+      "date": "Abr. 2020 - Dic. 2020 ",
+      "position": "Full Stack Developer",
+      "mode": "(Remote Contractor)"
+    },
+    {
+      "companyName": "Proximity",
+      "date": "Jun. 2019 - Abr. 2020 ",
+      "position": "Front End Developer",
+      "mode": "(Contractor)"
+    },
+    {
+      "companyName": "Softon",
+      "date": "Jun. 2019 - Abr. 2020 ",
+      "position": "Front End Developer",
+      "mode": "(Contractor)"
+    },
+    {
+      "companyName": "GreenCube",
+      "date": "Jun. 2019 - Abr. 2020 ",
+      "position": "Front End Developer",
+      "mode": "(Remote Contractor)"
+    }
+  ],
   "job1": "Dic. 2020 - Actualidad Parsley Health, Nueva York EE. UU. - Programadora Web Full Stack",
   "job2": "Abr. 2020 - Dic. 2020 TradeStation, Texas EE. UU.  - Programadora Web Full Stack",
   "job3": "Jun. 2019 - Abr. 2020 Proximity, San Jose CR - Programadora Web Full Stack ",
