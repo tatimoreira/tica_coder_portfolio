@@ -5,7 +5,7 @@ module.exports = {
     textColor: {
       primary: "var(--color-text-primary)",
       secondary: "var(--color-text-secondary)",
-      default: "var(--color-text-default)",
+      colorPop2: "var(--color-text-colorPop2)",
       "default-soft": "var(--color-text-default-soft)",
       inverse: "var(--color-text-inverse)",
       "inverse-soft": "var(--color-text-inverse-soft)",

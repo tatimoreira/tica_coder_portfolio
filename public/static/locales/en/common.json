@@ -1,7 +1,7 @@
 {
   "greeting": "Hello World!",
-  "description": "My name is Tati and I'm a Software Engineer, currently working at <0>Parsley Health</0> as a web developer. I speak spanish, english and chinese. I code from the tropics in beautiful Costa Rica.",
-  "eduTitle": "Education",
+  "description": "My name is Tati and I'm a Software Engineer, currently working at <0>Parsley Health</0> as a web developer. I speak spanish, english and chinese. I code from the tropics in beautiful Costa Rica. After work you can find me at the gym or joining my languages classes",
+  "eduTitle": "Formal Education",
   "eduText": "No body cares about this anymore, right?",
   "edu1": "2016-2018 NUIST, Nanjin China - Master Degree in Computer Science ",
   "edu2": "2009-2015 UNA, Heredia Costa Rica - Bachelor Degree in Computer Science",
@@ -11,7 +11,92 @@
   "aboutWork": "About my work",
   "aboutMe": "About me",
   "experience": "Experience",
+  "educationArray": [
+    {
+      "date": "2016-2018",
+      "institution": "NUIST",
+      "place": "Nanjin China",
+      "title": "Master Degree in Computer Science"
+    },
+    {
+      "date": "2009-2015",
+      "institution": "UNA",
+      "place": "Heredia Costa Rica ",
+      "title": "Bachelor Degree in Computer Science"
+    }
+  ],
+  "jobsArray": [
+    {
+      "companyName": "Parsley Health",
+      "companyLink": "https://www.parsleyhealth.com/",
+      "date": "Dic. 2020 - Currently",
+      "position": "Full Stack Developer",
+      "mode": "(Remote Contractor)",
+      "description": [
+        "The team I'm part in is building a new Parsley Health's product called Insights which is a lower-cost, self-guided product intented to convert clients to Parsley Health's full membership.",
+        "During my time here I have been given the opportunity  to work with everything from architecture to backend and frontend.",
+        "Technologies that I've been using in this project includes: Node, Typescript, Javascript, Firestore, React"
+      ]
+    },
+    {
+      "companyName": "TradeStation",
+      "date": "Abr. 2020 - Dic. 2020 ",
+      "position": "Full Stack Developer",
+      "mode": "(Remote Contractor)",
+      "description": [
+        "During my time at Tradestation I worked mostly in front end but also had the opportunity to work some backend and propose architectural solutions.",
+        "Technologies that I used at this job: Node, Typescript, Javascript, React, Golang, Tailwind."
+      ]
+    },
+    {
+      "companyName": "Proximity",
+      "date": "Jun. 2019 - Abr. 2020 ",
+      "position": "Front End Developer",
+      "mode": "(Contractor)",
+      "description": [
+        "I worked in a variety of projects both for clients and internal use.",
+        "Technologies that I used at this job: Node, Typescript, Javascript, React."
+      ]
+    },
+    {
+      "companyName": "Softon",
+      "date": "Jun. 2019 - Abr. 2020 ",
+      "position": "Front End Developer",
+      "mode": "(Contractor)",
+      "description": [
+        "I worked in a variety of projects both for clients and internal use.",
+        "Technologies that I used at this job: Node, Typescript, Javascript, React."
+      ]
+    },
+    {
+      "companyName": "GreenCube",
+      "date": "Jun. 2019 - Abr. 2020 ",
+      "position": "Front End Developer",
+      "mode": "(Remote Contractor)"
+    },
+    {
+      "companyName": "Janeiro Digital",
+      "date": "Jun. 2019 - Abr. 2020 ",
+      "position": "Front End Developer",
+      "mode": "(Contractor)",
+      "description": [
+        "I worked as QA engineer doing manual and automate testing, documenting the issues.",
+        "Technologies that I used at this job: Javascript, Selenium."
+      ]
+    },
+    {
+      "companyName": "Intel Corporation",
+      "date": "Jun. 2019 - Abr. 2020 ",
+      "position": "Front End Developer",
+      "mode": "(Remote Contractor)",
+      "description": [
+        "This was my very first job where I mostly worked on simple front end",
+        "Technologies that I used at this job: Javascript, Kendo UI."
+      ]
+    }
+  ],
   "job1": "Dic. 2020 - Currently Parsley Health, New York USA - Full Stack Web Developer ",
+  "job1Description": "Development and maintenance of parsley service platforms.Working in a collaborative environment together with backend developers, designers and project managers to achieve an exceptional user experience. At Parsley I worked in a remote environment and with a diverse team which have helped me with my comunncation skills ",
   "job2": "Abr. 2020 - Dic. 2020 TradeStation, Texas USA - Full Stack Web Developer ",
   "job3": "Jun. 2019 - Abr. 2020 Proximity, San Jose CR - Full Stack Web Developer ",
   "job4": "Oct. 2018 - Jun. 2019 Softon, San Jose CR - FrontEnd Developer ",

@@ -21,10 +21,11 @@
 
   --color-text-primary: #9371a5;
   --color-text-secondary: #69B2C5;
-  --color-text-default: #E9BC3F;
+  --color-text-colorPop2: #ED7DB0;
   --color-text-default-soft: #999;
   --color-text-inverse: #3CB9EB;
   --color-text-inverse-soft:  #7e7e7e;
+  
   --color-text-explorer1: #7e7e7e;
   --color-text-white: #FFFFFF;
 
@@ -62,7 +63,7 @@
   --color-text-comment: #636d83;
   --color-text-primary: #5cdb95;
   --color-text-secondary: #bc85f9;
-  --color-text-default: #D4417B;
+  --color-text-colorPop2: #DD4480;
   --color-text-default-soft: #ffe380;
   --color-text-inverse: #99ffff;
   --color-text-inverse-soft: #bbb;
