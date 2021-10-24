@@ -16,32 +16,73 @@
       "companyName": "Parsley Health",
       "companyLink": "https://www.parsleyhealth.com/",
       "date": "Dic. 2020 - Currently",
-      "position": "Full Stack Developer",
-      "mode": "(Remote Contractor)"
+      "position": "Desarrolladora Full Stack",
+      "mode": "(Contrato fijo remoto)",
+      "description": [
+        "El equipo del que formo parte está creando un nuevo producto de Parsley Health llamado Insights, que es un producto de gestión virtual de menor costo destinado a convertir a los clientes a la membresía completa de Parsley Health.",
+        "Durante mi tiempo aquí, he tenido la oportunidad de trabajar con todo, desde arquitectura hasta backend y frontend.",
+        "Las tecnologías que he estado usando en este proyecto incluyen: Node, Typecript, Javascript, Firestore, React "
+      ]
     },
     {
       "companyName": "TradeStation",
       "date": "Abr. 2020 - Dic. 2020 ",
-      "position": "Full Stack Developer",
-      "mode": "(Remote Contractor)"
+      "position": "Desarrolladora Full Stack",
+      "mode": "(Contrato fijo remoto)",
+      "description": [
+        "Durante mi tiempo en Tradestation trabajé principalmente en front-end, pero también tuve la oportunidad de trabajar en backend y proponer soluciones arquitectónicas.",
+        "Tecnologías que utilicé en este trabajo: Node, Typecript, Javascript, React, Golang, Tailwind."
+      ]
     },
     {
       "companyName": "Proximity",
       "date": "Jun. 2019 - Abr. 2020 ",
-      "position": "Front End Developer",
-      "mode": "(Contractor)"
+      "position": "Desarrolladora Front End ",
+      "mode": "(Contractor)",
+      "description": [
+        "Trabajé en una variedad de proyectos tanto para clientes como para uso interno.",
+        "Tecnologías que utilicé en este trabajo: Node, Typecript, Javascript, React."
+      ]
     },
     {
       "companyName": "Softon",
       "date": "Jun. 2019 - Abr. 2020 ",
-      "position": "Front End Developer",
-      "mode": "(Contractor)"
+      "position": "Desarrolladora Front End ",
+      "mode": "(Contractor)",
+      "description": [
+        "Trabajé en una variedad de proyectos web y móvil.",
+        "Tecnologías que utilicé en este trabajo: Node, Typecript, Javascript, React, React Native."
+      ]
     },
     {
       "companyName": "GreenCube",
       "date": "Jun. 2019 - Abr. 2020 ",
+      "position": "Desarrolladora Front End ",
+      "mode": "(Remote Contractor)",
+      "description": [
+        "Trabajé en una variedad de proyectos web y móvil.",
+        "Tecnologías que utilicé en este trabajo: Node, Typecript, Javascript, React, React Native."
+      ]
+    },
+    {
+      "companyName": "Janeiro Digital",
+      "date": "Jun. 2019 - Abr. 2020 ",
+      "position": "Ingeniera QA",
+      "mode": "(Contractor)",
+      "description": [
+        "Trabajé como ingeniera de control de calidad haciendo pruebas manuales y automatizadas, documentando los problemas",
+        "Tecnologías que utilicé en este trabajo: Javascript, Selenium."
+      ]
+    },
+    {
+      "companyName": "Intel Corporation",
+      "date": "Jun. 2019 - Abr. 2020 ",
       "position": "Front End Developer",
-      "mode": "(Remote Contractor)"
+      "mode": "(Remote Contractor)",
+      "description": [
+        "Este fue mi primer trabajo en el que trabajé principalmente en tareas sencillas de front end.",
+        "Tecnologías que utilicé en este trabajo: Javascript, Kendo UI."
+      ]
     }
   ],
   "job1": "Dic. 2020 - Actualidad Parsley Health, Nueva York EE. UU. - Programadora Web Full Stack",

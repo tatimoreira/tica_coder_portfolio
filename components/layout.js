@@ -55,12 +55,6 @@ function Layout({ children, mainClasses = "", isLight = false }) {
       color: "#7e7e7e",
       icon: <FontAwesomeIcon icon={faAddressCard} />,
     },
-    {
-      title: t("blog"),
-      route: "/blog",
-      color: "#7e7e7e",
-      icon: <FontAwesomeIcon icon={faFileSignature} />,
-    },
   ];
 
   const ContactItems = [
