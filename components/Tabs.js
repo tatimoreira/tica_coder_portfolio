@@ -7,12 +7,15 @@ export const Tabs = ({ color }) => {
   const [openTab, setOpenTab] = React.useState(1);
   const { t, i18n } = useTranslation();
   const jobsArray = i18n.t("jobsArray", { returnObjects: true });
+
+  const [value, setValue] = React.useState("Parsley Health");
+
   return (
     <>
-      <div className="flex flex-wrap">
+      <div className="hidden md:flex md:flex-wrap ">
         <div className="w-full">
           <ul
-            className="flex mb-0 list-none flex-wrap pt-3 pb-4 flex-row"
+            className="flex mb-0 list-none flex-wrap pt-3 pb-4 flex-row  "
             role="tablist"
           >
             {jobsArray.map((element, index) => {
@@ -21,10 +24,10 @@ export const Tabs = ({ color }) => {
                   <a
                     onClick={(e) => {
                       e.preventDefault();
-                      setOpenTab(index + 1);
+                      setValue(element.companyName);
                     }}
-                    className={`text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal border-2 ${
-                      openTab === index + 1
+                    className={`text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal border-2  ${
+                      value === element.companyName
                         ? `text-white bg-colorPop2`
                         : `text-colorPop2 bg-white`
                     } `}
@@ -41,30 +44,51 @@ export const Tabs = ({ color }) => {
               );
             })}
           </ul>
-          <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-sm border-2 p-4 border-secondary">
-            <div className="px-4 py-5 flex-auto">
-              <div className="tab-content tab-space">
-                {jobsArray.map((element, index) => {
-                  return (
-                    <div
-                      className={openTab === index + 1 ? "block" : "hidden"}
-                      id={`link${index + 1}`}
-                    >
-                      <Paragraph
-                        text={`${element.position} ${element.mode}`}
-                      ></Paragraph>
-                      <br />
-                      <br />
-                      <ul className="list-disc">
-                        {element?.description?.map((d) => {
-                          return <Li text={d}></Li>;
-                        })}
-                      </ul>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
+        </div>
+      </div>
+      <form className="flex flex-col md:hidden ">
+        <select
+          className="border-2 text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal text-white bg-colorPop2"
+          name="selectList"
+          id="selectList"
+          onChange={(e) => setValue(e.currentTarget.value)}
+        >
+          {jobsArray.map((element) => {
+            return (
+              <>
+                 {" "}
+                <option value={element.companyName} key={element.companyName}>
+                  {" "}
+                  {`${element.companyName} - ${element.date}`}
+                </option>
+                 
+              </>
+            );
+          })}
+        </select>
+      </form>
+      <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-sm border-2 p-4 border-secondary">
+        <div className="px-4 py-5 flex-auto">
+          <div className="tab-content tab-space">
+            {jobsArray.map((element, index) => {
+              return (
+                <div
+                  className={value === element.companyName ? "block" : "hidden"}
+                  id={`link${index + 1}`}
+                >
+                  <Paragraph
+                    text={`${element.position} ${element.mode}`}
+                  ></Paragraph>
+                  <br />
+                  <br />
+                  <ul className="list-disc">
+                    {element?.description?.map((d) => {
+                      return <Li text={d}></Li>;
+                    })}
+                  </ul>
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>
