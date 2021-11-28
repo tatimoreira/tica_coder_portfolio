@@ -3,7 +3,7 @@ import Link from "next/link";
 import { languages } from "../../constants/types";
 import { useTranslation } from "react-i18next";
 
-function MobileMenu({ isExpanded }) {
+function MobileMenu({ isExpanded, setTheme, onChangeLanguage }) {
   const { t, i18n } = useTranslation();
   return (
     <ul

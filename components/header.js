@@ -51,7 +51,13 @@ function Header() {
 
         {/*Hamburguer*/}
         <MenuButton isExpanded={isExpanded} toggleExpansion={toggleExpansion} />
-        <MobileMenu languages={languages} isExpanded={isExpanded} />
+        <MobileMenu
+          languages={languages}
+          isExpanded={isExpanded}
+          theme={theme}
+          setTheme={setTheme}
+          onChangeLanguage={onChangeLanguage}
+        />
       </div>
     </nav>
   );
