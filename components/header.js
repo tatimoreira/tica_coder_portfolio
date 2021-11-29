@@ -32,7 +32,7 @@ function Header() {
 
   return (
     <nav className="relative bg-background">
-      <div className="flex flex-wrap items-center justify-between p-4 mx-auto md:flex-no-wrap ">
+      <div className="items-center justify-between p-4 mx-auto md:flex-no-wrap ">
         <div className="flex items-center">
           <div className="hidden md:flex ml-6">
             {languages.map((language, key) => (
