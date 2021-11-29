@@ -3,6 +3,8 @@ import Link from "next/link";
 import { languages } from "../../constants/types";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
+import MoonIcon from "../atoms/MoonIcon";
+import SunIcon from "../atoms/SunIcon";
 
 const slideVerticalAnimation = {
   open: {
@@ -55,18 +57,19 @@ function MobileMenu({ isExpanded, setTheme, onChangeLanguage }) {
               </button>
             ))}
           </li>
-          <li className="flex justify-center w-full h-10 mt-1 mr-6  md:bg-background">
+
+          <li className="flex justify-center w-full h-10 mt-1 mr-6 mb-2 md:bg-background">
             <button
-              className="p-1 m-1 font-bold border-2 rounded-full  text-s text-white  bg-colorPop2 "
+              className="p-3 mr-2 font-bold border-2 rounded-full  text-s text-white  bg-colorPop2 "
               onClick={() => setTheme("light")}
             >
-              LIGHT
+              <SunIcon />
             </button>
             <button
-              className="p-1  m-1 font-bold border-2 rounded-full  text-s text-white  bg-colorPop2"
+              className="p-3 font-bold border-2 rounded-full  text-s text-white  bg-colorPop2"
               onClick={() => setTheme("dark")}
             >
-              DARK
+              <MoonIcon />
             </button>
           </li>
           {[

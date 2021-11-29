@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import { languages } from "../constants/types";
 import MenuButton from "./molecules/MenuButton";
 import MobileMenu from "./molecules/MobileMenu";
+import MoonIcon from "./atoms/MoonIcon";
 
 function Header() {
   const { t, i18n } = useTranslation();
@@ -32,7 +33,7 @@ function Header() {
 
   return (
     <nav className="relative bg-background">
-      <div className="items-center justify-between p-4 mx-auto md:flex-no-wrap ">
+      <div className="items-center justify-between p-4 mx-auto md:flex-no-wrap text-primary">
         <div className="flex items-center">
           <div className="hidden md:flex ml-6">
             {languages.map((language, key) => (
@@ -50,7 +51,13 @@ function Header() {
         </div>
 
         {/*Hamburguer*/}
-        <MenuButton isExpanded={isExpanded} toggleExpansion={toggleExpansion} />
+        <div className="flex">
+          <MenuButton
+            isExpanded={isExpanded}
+            toggleExpansion={toggleExpansion}
+          />
+        </div>
+
         <MobileMenu
           languages={languages}
           isExpanded={isExpanded}
