@@ -27,16 +27,18 @@ module.exports = {
       explorer: "var(--color-bg-explorer)",
       colorPop1: "var(--color-bg-colorPop1)",
       colorPop2: "var(--color-bg-colorPop2)",
-      colorPop3: "var(--color-bg-colorPop3)"
+      colorPop3: "var(--color-bg-colorPop3)",
     },
     borderColor: {
       primary: "var(--color-border-primary)",
       secondary: "var(--color-border-secondary)",
+      defaultSoft: "var(--color-border-default-soft)",
+      inverse: "var(--color-border-inverse)",
     },
     fontFamily: {
       display: "var(--font-display)",
       body: "var(--font-body)",
-      custom: ['Roboto Mono', 'sans-serif'],
+      custom: ["Roboto Mono", "sans-serif"],
     },
     fontWeights: {
       normal: "var(--font-weight-normal)",

@@ -1,13 +1,13 @@
 import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { useTheme, localStorage } from "next-themes";
-import LanguageSelector from "./LanguageSelector";
 import { useLocalStorage } from "../hooks/useLocalStorage";
 import { motion } from "framer-motion";
 import { languages } from "../constants/types";
 import MenuButton from "./molecules/MenuButton";
 import MobileMenu from "./molecules/MobileMenu";
 import MoonIcon from "./atoms/MoonIcon";
+import SunIcon from "./atoms/SunIcon";
 
 function Header() {
   const { t, i18n } = useTranslation();
@@ -56,6 +56,32 @@ function Header() {
             isExpanded={isExpanded}
             toggleExpansion={toggleExpansion}
           />
+          <div className="md:hidden flex ml-auto">
+            <div className="mr-3">
+              {languages.map((language, key) => (
+                <button
+                  key={key}
+                  className="p-3 m-1 font-bold border-2 rounded-full text-s text-secondary rounded-lg "
+                  onClick={() => onChangeLanguage(language.shortName)}
+                >
+                  {t(language.name)}
+                </button>
+              ))}
+            </div>
+
+            <button
+              className="p-3 m-1 font-bold border-2 rounded-full  text-s text-default-soft   "
+              onClick={() => setTheme("light")}
+            >
+              <SunIcon />
+            </button>
+            <button
+              className="p-3  m-1 font-bold border-2 rounded-full  text-s text-inverse  "
+              onClick={() => setTheme("dark")}
+            >
+              <MoonIcon />
+            </button>
+          </div>
         </div>
 
         <MobileMenu

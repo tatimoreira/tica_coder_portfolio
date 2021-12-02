@@ -1,10 +1,7 @@
 import React from "react";
 import Link from "next/link";
-import { languages } from "../../constants/types";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
-import MoonIcon from "../atoms/MoonIcon";
-import SunIcon from "../atoms/SunIcon";
 
 const slideVerticalAnimation = {
   open: {
@@ -39,6 +36,7 @@ function MobileMenu({ isExpanded, setTheme, onChangeLanguage }) {
       initial="close"
       animate={isExpanded ? "open" : "close"}
       variants={slideVerticalAnimation}
+      className="mt-6"
     >
       <motion.div className="menu menu-categories">
         <ul
@@ -46,32 +44,6 @@ function MobileMenu({ isExpanded, setTheme, onChangeLanguage }) {
             isExpanded ? `block` : `hidden`
           }  md:items-center md:justify-center text-sm w-full md:w-auto`}
         >
-          <li className="flex justify-center h-10 mt-1 md:hidden ">
-            {languages.map((language, key) => (
-              <button
-                key={key}
-                className="p-1 m-1 font-bold border-2 rounded-full text-s text-white  bg-colorPop1"
-                onClick={() => onChangeLanguage(language.shortName)}
-              >
-                {t(language.name)}
-              </button>
-            ))}
-          </li>
-
-          <li className="flex justify-center w-full h-10 mt-1 mr-6 mb-2 md:bg-background">
-            <button
-              className="p-3 mr-2 font-bold border-2 rounded-full  text-s text-white  bg-colorPop2 "
-              onClick={() => setTheme("light")}
-            >
-              <SunIcon />
-            </button>
-            <button
-              className="p-3 font-bold border-2 rounded-full  text-s text-white  bg-colorPop2"
-              onClick={() => setTheme("dark")}
-            >
-              <MoonIcon />
-            </button>
-          </li>
           {[
             { title: t("aboutMe"), route: "/" },
             { title: t("aboutWork"), route: "/about-work" },
