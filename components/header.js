@@ -61,7 +61,7 @@ function Header() {
               {languages.map((language, key) => (
                 <button
                   key={key}
-                  className="p-3 m-1 font-bold border-2 rounded-full text-s text-secondary rounded-lg "
+                  className="p-3 mr-1 font-bold border-2 rounded-full text-s text-secondary rounded-lg "
                   onClick={() => onChangeLanguage(language.shortName)}
                 >
                   {t(language.name)}
@@ -70,13 +70,13 @@ function Header() {
             </div>
 
             <button
-              className="p-3 m-1 font-bold border-2 rounded-full  text-s text-default-soft   "
+              className="p-3 mr-1 font-bold border-2 rounded-full  text-s text-default-soft   "
               onClick={() => setTheme("light")}
             >
               <SunIcon />
             </button>
             <button
-              className="p-3  m-1 font-bold border-2 rounded-full  text-s text-inverse  "
+              className="p-3  mr-1 font-bold border-2 rounded-full  text-s text-inverse  "
               onClick={() => setTheme("dark")}
             >
               <MoonIcon />
