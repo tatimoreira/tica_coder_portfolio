@@ -6,28 +6,28 @@
   --color-bg-yellow: #ffea2e;
 
   --color-bg-foreground: #fafafa;
-  --color-bg-background: #E4E3E2;
+  --color-bg-background: #e4e3e2;
   --color-bg-primary: #ff5851;
   --color-bg-secondary: #fafafa;
   --color-bg-default: #fff;
   --color-bg-inverse: #eeeeee;
-  --color-bg-colorPop1: #41D05A;
-  --color-bg-colorPop2: #ED7DB0;
-  --color-bg-colorPop3: #E9BC3F;
+  --color-bg-colorPop1: #41d05a;
+  --color-bg-colorPop2: #ed7db0;
+  --color-bg-colorPop3: #e9bc3f;
 
   --color-bg-header: #a0a1a7;
   --color-bg-explorer: #eeeeee;
   --color-bg-explorer: #eeeeee;
 
   --color-text-primary: #9371a5;
-  --color-text-secondary: #69B2C5;
-  --color-text-colorPop2: #ED7DB0;
+  --color-text-secondary: #69b2c5;
+  --color-text-colorPop2: #ed7db0;
   --color-text-default-soft: #999;
-  --color-text-inverse: #3CB9EB;
-  --color-text-inverse-soft:  #7e7e7e;
-  
+  --color-text-inverse: #3cb9eb;
+  --color-text-inverse-soft: #7e7e7e;
+
   --color-text-explorer1: #7e7e7e;
-  --color-text-white: #FFFFFF;
+  --color-text-white: #ffffff;
 
   --font-display: "Robot Mono", "Helvetica Neue", Helvetica, Arial, sans-serif;
   --font-body: "Robot Mono", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -38,7 +38,7 @@
 
   --rounded-btn: 0.25rem;
 
-  --color-border-primary: ##ae47ac;
+  --color-border-primary: #ae47ac;
   --color-border-secondary: #4f82ee;
 }
 
@@ -57,13 +57,13 @@
   --color-bg-secondary: #3d434f;
   --color-bg-default: #27241d;
   --color-bg-inverse: #373737;
-  --color-bg-colorPop1: #2F8BD2;
-  --color-bg-colorPop2: #DD4480;
+  --color-bg-colorPop1: #2f8bd2;
+  --color-bg-colorPop2: #dd4480;
 
   --color-text-comment: #636d83;
   --color-text-primary: #5cdb95;
   --color-text-secondary: #bc85f9;
-  --color-text-colorPop2: #DD4480;
+  --color-text-colorPop2: #dd4480;
   --color-text-default-soft: #ffe380;
   --color-text-inverse: #99ffff;
   --color-text-inverse-soft: #bbb;
@@ -71,9 +71,9 @@
   --color-text-explorer1: #7e7e7e;
 
   --font-display: "Robot Mono", Georgia, Times, "Times New Roman", serif;
-  --font-body: "Robot Mono", Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans",
-    "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana,
-    "Verdana Ref", sans-serif;
+  --font-body: "Robot Mono", Corbel, "Lucida Grande", "Lucida Sans Unicode",
+    "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans",
+    Verdana, "Verdana Ref", sans-serif;
 
   --font-weight-normal: 400;
   --font-weight-display: 400;
@@ -83,6 +83,8 @@
 
   --color-border-primary: #5cdb95;
   --color-border-secondary: #bc85f9;
+  --color-border-default-soft: #ffe380;
+  --color-border-inverse: #99ffff;
 }
 
 .sideBar {
