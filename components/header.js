@@ -14,6 +14,10 @@ function Header() {
   const [isExpanded, toggleExpansion] = useState(false);
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
+
+  const [themeMode, setThemeMode] = useState(
+    theme === "light" ? "dark" : "light"
+  );
   const [lang, setLang] = useLocalStorage("lang", i18n.language);
 
   const onChangeLanguage = (language) => {
@@ -30,6 +34,16 @@ function Header() {
   useEffect(() => setMounted(true), []);
 
   if (!mounted) return null;
+
+  const switchTheme = (currentTheme) => {
+    if (currentTheme === "light") {
+      setTheme("dark");
+      setThemeMode("light");
+    } else {
+      setTheme("light");
+      setThemeMode("dark");
+    }
+  };
 
   return (
     <nav className="relative bg-background">
@@ -51,7 +65,7 @@ function Header() {
         </div>
 
         {/*Hamburguer*/}
-        <div className="flex">
+        <div className="flex mb-4">
           <MenuButton
             isExpanded={isExpanded}
             toggleExpansion={toggleExpansion}
@@ -61,7 +75,7 @@ function Header() {
               {languages.map((language, key) => (
                 <button
                   key={key}
-                  className="p-3 mr-1 font-bold border-2 rounded-full text-s text-secondary rounded-lg "
+                  className="p-3 mr-1 font-bold border-2 rounded-full text-s text-colorPop2 rounded-lg "
                   onClick={() => onChangeLanguage(language.shortName)}
                 >
                   {t(language.name)}
@@ -70,16 +84,10 @@ function Header() {
             </div>
 
             <button
-              className="p-3 mr-1 font-bold border-2 rounded-full  text-s text-default-soft   "
-              onClick={() => setTheme("light")}
+              className="p-3 mr-1 font-bold border-2 rounded-full  text-s text-inverse  "
+              onClick={() => switchTheme(theme)}
             >
-              <SunIcon />
-            </button>
-            <button
-              className="p-3  mr-1 font-bold border-2 rounded-full  text-s text-inverse  "
-              onClick={() => setTheme("dark")}
-            >
-              <MoonIcon />
+              {themeMode === "light" ? <SunIcon /> : <MoonIcon />}
             </button>
           </div>
         </div>

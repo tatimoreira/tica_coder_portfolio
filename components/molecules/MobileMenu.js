@@ -17,7 +17,7 @@ const slideVerticalAnimation = {
   },
   close: {
     rotateX: -15,
-    y: -320,
+    y: -200,
     opacity: 0,
     transition: {
       duration: 0.3,
@@ -36,31 +36,28 @@ function MobileMenu({ isExpanded, setTheme, onChangeLanguage }) {
       initial="close"
       animate={isExpanded ? "open" : "close"}
       variants={slideVerticalAnimation}
-      className="mt-6"
     >
-      <motion.div className="menu menu-categories">
-        <ul
-          className={`${
-            isExpanded ? `block` : `hidden`
-          }  md:items-center md:justify-center text-sm w-full md:w-auto`}
-        >
-          {[
-            { title: t("aboutMe"), route: "/" },
-            { title: t("aboutWork"), route: "/about-work" },
-            { title: t("experience"), route: "/experience" },
-            { title: t("contact"), route: "/contact" },
-          ].map((navigationItem) => (
-            <li
-              className="flex justify-center h-10 mt-1 text-base font-bold text-primary md:hidden"
-              key={navigationItem.title}
-            >
-              <Link href={navigationItem.route}>
-                <a className="block text-primary ">{navigationItem.title}</a>
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </motion.div>
+      <ul
+        className={`${
+          isExpanded ? `block` : `hidden`
+        }  md:items-center md:justify-center text-sm w-full md:w-auto`}
+      >
+        {[
+          { title: t("aboutMe"), route: "/" },
+          { title: t("aboutWork"), route: "/about-work" },
+          { title: t("experience"), route: "/experience" },
+          { title: t("contact"), route: "/contact" },
+        ].map((navigationItem) => (
+          <li
+            className="flex justify-center h-10 mt-1 text-base font-bold text-primary md:hidden"
+            key={navigationItem.title}
+          >
+            <Link href={navigationItem.route}>
+              <a className="block text-primary ">{navigationItem.title}</a>
+            </Link>
+          </li>
+        ))}
+      </ul>
     </motion.div>
   );
 }

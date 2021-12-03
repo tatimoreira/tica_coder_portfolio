@@ -65,7 +65,7 @@
   --color-text-secondary: #bc85f9;
   --color-text-colorPop2: #dd4480;
   --color-text-default-soft: #ffe380;
-  --color-text-inverse: #99ffff;
+  --color-text-inverse: #ffe380;
   --color-text-inverse-soft: #bbb;
 
   --color-text-explorer1: #7e7e7e;
@@ -84,7 +84,7 @@
   --color-border-primary: #5cdb95;
   --color-border-secondary: #bc85f9;
   --color-border-default-soft: #ffe380;
-  --color-border-inverse: #99ffff;
+  --color-border-inverse: #ffe380;
 }
 
 .sideBar {
