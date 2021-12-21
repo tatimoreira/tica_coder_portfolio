@@ -15,7 +15,7 @@ const Path = (props) => (
 function MenuButton({ isExpanded, toggleExpansion }) {
   return (
     <motion.button
-      className="menu-button flex items-center block px-3 py-2 border-2 rounded-lg border-primary md:hidden text-primary"
+      className="menu-button flex items-center block px-2 py-2  rounded-lg border-primary md:hidden text-primary"
       onClick={() => toggleExpansion(!isExpanded)}
       animate={isExpanded ? "open" : "closed"}
       initial={false}

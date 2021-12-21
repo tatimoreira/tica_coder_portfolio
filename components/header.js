@@ -8,6 +8,8 @@ import MenuButton from "./molecules/MenuButton";
 import MobileMenu from "./molecules/MobileMenu";
 import MoonIcon from "./atoms/MoonIcon";
 import SunIcon from "./atoms/SunIcon";
+import { faGlobe } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Header() {
   const { t, i18n } = useTranslation();
@@ -61,34 +63,40 @@ function Header() {
                 </button>
               </motion.button>
             ))}
-          </div>
-        </div>
-
-        {/*Hamburguer*/}
-        <div className="flex mb-4">
-          <MenuButton
-            isExpanded={isExpanded}
-            toggleExpansion={toggleExpansion}
-          />
-          <div className="md:hidden flex ml-auto">
-            <div className="mr-3">
-              {languages.map((language, key) => (
-                <button
-                  key={key}
-                  className="p-3 mr-1 font-bold border-2 rounded-full text-s text-colorPop2 rounded-lg "
-                  onClick={() => onChangeLanguage(language.shortName)}
-                >
-                  {t(language.name)}
-                </button>
-              ))}
-            </div>
-
             <button
               className="p-3 mr-1 font-bold border-2 rounded-full  text-s text-inverse  "
               onClick={() => switchTheme(theme)}
             >
               {themeMode === "light" ? <SunIcon /> : <MoonIcon />}
             </button>
+          </div>
+        </div>
+
+        {/*Hamburguer*/}
+        <div className="flex ">
+          <MenuButton
+            isExpanded={isExpanded}
+            toggleExpansion={toggleExpansion}
+          />
+          <button
+            className="p-3 mr-1 ml-2 font-bold rounded-lg  text-s text-inverse  "
+            onClick={() => switchTheme(theme)}
+          >
+            {themeMode === "light" ? <SunIcon /> : <MoonIcon />}
+          </button>
+          <div className="flex items-center ml-auto">
+            <FontAwesomeIcon icon={faGlobe} className="mr-1" />
+            <div className="mr-3">
+              {languages.map((language, key) => (
+                <button
+                  key={key}
+                  className="mr-1 font-bold  text-s text-colorPop2 "
+                  onClick={() => onChangeLanguage(language.shortName)}
+                >
+                  {t(language.name)}
+                </button>
+              ))}
+            </div>
           </div>
         </div>
 
