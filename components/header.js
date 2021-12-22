@@ -51,35 +51,38 @@ function Header() {
     <nav className="relative bg-background">
       <div className="items-center justify-between p-4 mx-auto md:flex-no-wrap text-primary">
         <div className="flex items-center">
-          <div className="hidden md:flex ml-6">
-            {languages.map((language, key) => (
-              <motion.button whileHover={{ scale: 1.1 }}>
-                <button
-                  key={key}
-                  className="p-1 m-1 font-bold rounded-full border-2 text-s text-white bg-colorPop1"
-                  onClick={() => onChangeLanguage(language.shortName)}
-                >
-                  {t(language.name)}
-                </button>
-              </motion.button>
-            ))}
+          <div className="hidden md:flex ml-16 w-full">
             <button
               className="p-3 mr-1 font-bold border-2 rounded-full  text-s text-inverse  "
               onClick={() => switchTheme(theme)}
             >
               {themeMode === "light" ? <SunIcon /> : <MoonIcon />}
             </button>
+            <div className="flex items-center ml-auto">
+              <FontAwesomeIcon icon={faGlobe} className="mr-1" />
+              <div className="mr-3">
+                {languages.map((language, key) => (
+                  <button
+                    key={key}
+                    className="mr-1 font-bold  text-s text-colorPop2 "
+                    onClick={() => onChangeLanguage(language.shortName)}
+                  >
+                    {t(language.name)}
+                  </button>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
 
         {/*Hamburguer*/}
-        <div className="flex ">
+        <div className="flex md:hidden">
           <MenuButton
             isExpanded={isExpanded}
             toggleExpansion={toggleExpansion}
           />
           <button
-            className="p-3 mr-1 ml-2 font-bold rounded-lg  text-s text-inverse  "
+            className="p-3 mr-1 ml-2 md:hidden  font-bold rounded-lg  text-s text-inverse  "
             onClick={() => switchTheme(theme)}
           >
             {themeMode === "light" ? <SunIcon /> : <MoonIcon />}
