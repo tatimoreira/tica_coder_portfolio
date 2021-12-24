@@ -6,8 +6,8 @@ import { motion } from "framer-motion";
 import { languages } from "../constants/types";
 import MenuButton from "./molecules/MenuButton";
 import MobileMenu from "./molecules/MobileMenu";
-import MoonIcon from "./atoms/MoonIcon";
-import SunIcon from "./atoms/SunIcon";
+import { MoonIcon } from "./atoms/MoonIcon";
+import { SunIcon } from "./atoms/SunIcon";
 import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
