@@ -10,6 +10,8 @@ import { MoonIcon } from "./atoms/MoonIcon";
 import { SunIcon } from "./atoms/SunIcon";
 import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { GlobeIcon } from "./atoms/GlobeIcon";
+import LanguageSwitcher from "./molecules/LanguageSwitcher";
 
 function Header() {
   const { t, i18n } = useTranslation();
@@ -58,20 +60,8 @@ function Header() {
             >
               {themeMode === "light" ? <SunIcon /> : <MoonIcon />}
             </button>
-            <div className="flex items-center ml-auto">
-              <FontAwesomeIcon icon={faGlobe} className="mr-1" />
-              <div className="mr-3">
-                {languages.map((language, key) => (
-                  <button
-                    key={key}
-                    className="mr-1 font-bold  text-s text-colorPop2 "
-                    onClick={() => onChangeLanguage(language.shortName)}
-                  >
-                    {t(language.name)}
-                  </button>
-                ))}
-              </div>
-            </div>
+
+            <LanguageSwitcher />
           </div>
         </div>
 
@@ -87,20 +77,7 @@ function Header() {
           >
             {themeMode === "light" ? <SunIcon /> : <MoonIcon />}
           </button>
-          <div className="flex items-center ml-auto">
-            <FontAwesomeIcon icon={faGlobe} className="mr-1" />
-            <div className="mr-3">
-              {languages.map((language, key) => (
-                <button
-                  key={key}
-                  className="mr-1 font-bold  text-s text-colorPop2 "
-                  onClick={() => onChangeLanguage(language.shortName)}
-                >
-                  {t(language.name)}
-                </button>
-              ))}
-            </div>
-          </div>
+          <LanguageSwitcher />
         </div>
 
         <MobileMenu
