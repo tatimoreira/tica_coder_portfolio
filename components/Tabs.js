@@ -26,7 +26,7 @@ export const Tabs = ({ color }) => {
           >
             {jobsArray.map((element, index) => {
               return (
-                <li className="-mb-px mr-2 last:mr-0 flex-auto text-center ">
+                <li key={index} className="-mb-px mr-2 last:mr-0 flex-auto text-center ">
                   <a
                     onClick={(e) => {
                       e.preventDefault();
@@ -52,7 +52,7 @@ export const Tabs = ({ color }) => {
           </ul>
         </div>
       </div>
-      <div class="p-4">
+      <div className="p-4">
       
 </div>
       <form className="flex flex-col ">
@@ -87,7 +87,7 @@ export const Tabs = ({ color }) => {
             {jobsArray.map((element) => {
               return (
               
-                  <li className={`${
+                  <li key={element.companyName} className={`${
                     value === element.companyName ? "text-primary" : "text-colorPop2"
                   } p-1 hover:text-secondary   cursor-pointer  `} value={element.companyName} key={element.companyName} onClick={(e) => setValue(element.companyName)}>
                   
@@ -110,6 +110,7 @@ export const Tabs = ({ color }) => {
             {jobsArray.map((element, index) => {
               return (
                 <div
+                key={index}
                   className={value === element.companyName ? "block" : "hidden"}
                   id={`link${index + 1}`}
                 >
@@ -122,7 +123,7 @@ export const Tabs = ({ color }) => {
                   <br />
                   <ul className="list-disc ">
                     {element?.description?.map((d) => {
-                      return <Li text={d}></Li>;
+                      return <Li key={d} text={d}></Li>;
                     })}
                   </ul>
                 </div>
