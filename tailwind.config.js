@@ -27,6 +27,7 @@ module.exports = {
       explorer: "var(--color-bg-explorer)",
       colorPop1: "var(--color-bg-colorPop1)",
       colorPop2: "var(--color-bg-colorPop2)",
+      transparent: "var(--color-bg-transparent)",
       colorPop3: "var(--color-bg-colorPop3)",
     },
     borderColor: {
