@@ -12,8 +12,9 @@ export const Tabs = ({ color }) => {
   const [show, setShow] = useState(false);
 
   const handleSelect = (value)=>{
-    setShow(!show);
+ 
     setValue(value)
+    setShow(false)
   }
 
   return (
@@ -76,7 +77,10 @@ export const Tabs = ({ color }) => {
          focus:text-primary focus:bg-transparent focus:border-primary focus:outline-none"
           name="selectList"
           id="selectList"
-          onClick={() => setShow(!show)}
+          onClick={(e) => {
+            e.preventDefault();
+            setShow(!show);
+          }}
         >
           
           {value}
@@ -89,7 +93,7 @@ export const Tabs = ({ color }) => {
               
                   <li key={element.companyName} className={`${
                     value === element.companyName ? "text-primary" : "text-colorPop2"
-                  } p-1 hover:text-secondary   cursor-pointer  `} value={element.companyName} key={element.companyName} onClick={(e) => setValue(element.companyName)}>
+                  } p-1 hover:text-secondary   cursor-pointer  `} value={element.companyName} key={element.companyName} onClick={(e) => handleSelect(element.companyName)}>
                   
                     {`${element.companyName} `}
                   </li>
@@ -123,7 +127,7 @@ export const Tabs = ({ color }) => {
                   <br />
                   <ul className="list-disc ">
                     {element?.description?.map((d) => {
-                      return <Li key={d} text={d}></Li>;
+                      return <Li text={d}></Li>;
                     })}
                   </ul>
                 </div>
