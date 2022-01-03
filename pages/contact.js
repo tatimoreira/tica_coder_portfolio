@@ -11,7 +11,7 @@ function Experience() {
   return (
     <Layout>
       <div className='flex flex-col pl-8 pr-8 md:pr-16 md:pl-16 bg-foreground sideBar  w-full'>
-        <div className='pt-12 pb-8 overflow-auto'>
+        <div className='pt-6 pb-8 overflow-auto'>
           <PageTitle text={t("contact")}></PageTitle>
           <Paragraph text={t("contactInfo")} />
           <br/>

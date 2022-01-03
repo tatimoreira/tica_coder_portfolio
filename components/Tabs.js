@@ -53,9 +53,6 @@ export const Tabs = ({ color }) => {
           </ul>
         </div>
       </div>
-      <div className="p-4">
-      
-</div>
       <form className="flex flex-col ">
         <button
          className="form-select appearance-none
@@ -114,7 +111,7 @@ export const Tabs = ({ color }) => {
             {jobsArray.map((element, index) => {
               return (
                 <div
-                key={index}
+                key={element.companyName }
                   className={value === element.companyName ? "block" : "hidden"}
                   id={`link${index + 1}`}
                 >
@@ -127,7 +124,7 @@ export const Tabs = ({ color }) => {
                   <br />
                   <ul className="list-disc ">
                     {element?.description?.map((d) => {
-                      return <Li text={d}></Li>;
+                      return <Li text={d} key={d}></Li>;
                     })}
                   </ul>
                 </div>

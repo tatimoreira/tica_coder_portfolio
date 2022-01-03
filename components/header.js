@@ -51,9 +51,9 @@ function Header() {
 
   return (
     <nav className="relative bg-background">
-      <div className="items-center justify-between p-4 mx-auto md:flex-no-wrap text-primary">
+      <div className="items-center justify-between p-3 mx-auto md:flex-no-wrap text-primary">
         <div className="flex items-center">
-          <div className="hidden md:flex ml-16 w-full">
+          <div className="hidden md:flex ml-12 w-full">
             <button
               className="p-3 mr-1 font-bold border-2 rounded-full  text-s text-inverse  "
               onClick={() => switchTheme(theme)}

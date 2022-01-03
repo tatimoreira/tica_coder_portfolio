@@ -107,7 +107,7 @@ function Layout({ children, mainClasses = "", isLight = false }) {
       <main className="flex-1 overflow-x-auto md:mr-12 md:ml-12  font-custom flex h-5/6">
         <aside className="hidden float-left sideBar bg-explorer md:block ">
           <AnimateSharedLayout>
-            <ul className="p-10">
+            <ul className="p-5">
               {navBarItems.map((navigationItem) => {
                 return (
                   <NavBarItem
