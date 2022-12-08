@@ -29,7 +29,7 @@
     "@fortawesome/free-brands-svg-icons": "^5.15.3",
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
     "@fortawesome/react-fontawesome": "^0.1.14",
-    "express": "^4.17.1",
+    "express": "^4.18.2",
     "framer-motion": "^2.9.4",
     "i18next-express-middleware": "^2.0.0",
     "install": "^0.13.0",
